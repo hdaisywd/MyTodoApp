@@ -3,9 +3,18 @@ import Foundation
 import UIKit
 
 class DateDetailVC: UIViewController {
-    private let month: Int?
-    private let day: Int?
+    /* 선택된 날짜 */
+    let month: Int?
+    let day: Int?
     
+    /* tableView */
+    let tableView = UITableView()
+    let dateLabel = UILabel()
+    let items: [String] = ["abc", "def", "ghi"]
+    
+    let monthInEnglish = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+    
+    /* 초기화 */
     init(_ dateComponents: DateComponents?) {
         self.month = dateComponents?.month
         self.day = dateComponents?.day
@@ -20,7 +29,8 @@ class DateDetailVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        
+        setDateLabel()
+        setTableView()
     }
 
 }

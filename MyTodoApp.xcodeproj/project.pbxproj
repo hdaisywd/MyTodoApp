@@ -20,6 +20,7 @@
 		ABE1F9B22A961C8100371F49 /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B12A961C8100371F49 /* TodoVC.swift */; };
 		ABE1F9B42A961C8A00371F49 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B32A961C8A00371F49 /* TodayVC.swift */; };
 		ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B52A961FA700371F49 /* Extension.swift */; };
+		ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BB2A963B9400371F49 /* SetTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		ABE1F9B12A961C8100371F49 /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
 		ABE1F9B32A961C8A00371F49 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
 		ABE1F9B52A961FA700371F49 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		ABE1F9BB2A963B9400371F49 /* SetTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				ABE1F9A92A961BEC00371F49 /* HomeVC.swift */,
-				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
 				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
+				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
+				ABE1F9BB2A963B9400371F49 /* SetTableView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
 				ABE1F9B42A961C8A00371F49 /* TodayVC.swift in Sources */,
+				ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */,
 				ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */,
 				ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */,
 				ABE1F99B2A961B4A00371F49 /* MyTodoApp.xcdatamodeld in Sources */,

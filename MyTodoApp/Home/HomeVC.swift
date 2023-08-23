@@ -14,7 +14,7 @@ class HomeVC: UIViewController {
 
         /* 달력 */
         let today = getDate()
-        getCalendar(year: today[0], month: today[1], date: today[2])
+        setCalendar(year: today[0], month: today[1], date: today[2])
     }
 
 

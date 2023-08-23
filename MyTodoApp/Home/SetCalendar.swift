@@ -17,7 +17,7 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
     }
 
     /* 캘린더를 불러온다 */
-    func getCalendar(year: Int, month: Int, date: Int) {
+    func setCalendar(year: Int, month: Int, date: Int) {
         calendarView.delegate = self
         calendarView.calendar = Calendar(identifier: .gregorian)
         calendarView.locale = Locale(identifier: "kr_KR")
