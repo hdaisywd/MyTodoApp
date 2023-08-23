@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+/* TabBarController 그림자 설정 1 */
 extension CALayer {
     // Sketch 스타일의 그림자를 생성하는 유틸리티 함수
     func applyShadow(
@@ -17,6 +18,7 @@ extension CALayer {
     }
 }
 
+/* TabBarController 그림자 설정 2 */
 extension UITabBar {
     // 기본 그림자 스타일을 초기화해야 커스텀 스타일을 적용할 수 있다.
     static func clearShadow() {

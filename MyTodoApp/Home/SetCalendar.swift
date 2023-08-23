@@ -1,9 +1,3 @@
-//
-//  SetCalendar.swift
-//  MyTodoApp
-//
-//  Created by Daisy Hong on 2023/08/23.
-//
 
 import Foundation
 import UIKit
@@ -11,17 +5,19 @@ import UIKit
 extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
 
     /* 오늘의 날짜를 불러온다 */
-    func getDate() -> [Int?] {
+    /* 예외 처리 해주는거 질문하기 */
+    func getDate() -> [Int] {
         let today = Date().formatted().components(separatedBy: " ")[0].components(separatedBy: "/")
-        let year = Int(today[0]) ?? 1998
-        let month = Int(today[1]) ?? 5
-        let date = Int(today[2]) ?? 8
-
+        let month = Int(today[0]) ?? 1998
+        let date = Int(today[1]) ?? 5
+        let year = Int(today[2]) ?? 8
+        
+        print(today)
         return [year, month, date]
     }
 
     /* 캘린더를 불러온다 */
-    func getCalendar(year: Int?, month: Int?, date: Int?) {
+    func getCalendar(year: Int, month: Int, date: Int) {
         calendarView.delegate = self
         calendarView.calendar = Calendar(identifier: .gregorian)
         calendarView.locale = Locale(identifier: "kr_KR")
@@ -47,12 +43,11 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
 
     /* 달력에서 날짜 선택 처리 */
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        print("date selection 실행")
         selection.setSelected(dateComponents, animated: true)
         selectedDate = dateComponents
 
         /* Date Detail 페이지 불러오기 */
-        let dateDetailVC = DateDetailVC()
+        let dateDetailVC = DateDetailVC(selectedDate)
         self.present(dateDetailVC, animated: true)
 
         reloadDateView(date: Calendar.current.date(from: dateComponents!))
@@ -60,7 +55,6 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
 
     /* 선택된 날짜들에 라벨 붙이기 */
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        print("calendar decoration 실행")
         if let selectedDate = selectedDate, selectedDate == dateComponents {
             return .customView {
                 let label = UILabel()
@@ -74,7 +68,6 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
 
     /* 날짜 선택 후 reload */
     func reloadDateView(date: Date?) {
-        print("reload view 실행")
         if date == nil { return }
         let calendar = Calendar.current
         calendarView.reloadDecorations(forDateComponents: [calendar.dateComponents([.day, .month, .year], from: date!)], animated: true)
