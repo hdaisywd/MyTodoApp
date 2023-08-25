@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		ABB7DA732A9725A200F4DA49 /* tilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA722A9725A200F4DA49 /* tilVC.swift */; };
 		ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA752A9725E800F4DA49 /* todoVC.swift */; };
+		ABCB6B3F2A98E84A005F0F91 /* SetHomeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */; };
+		ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B402A98E8B8005F0F91 /* User.swift */; };
+		ABCB6B432A98EBE1005F0F91 /* setUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B422A98EBE1005F0F91 /* setUserProfile.swift */; };
 		ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9902A961B4A00371F49 /* AppDelegate.swift */; };
 		ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */; };
 		ABE1F99B2A961B4A00371F49 /* MyTodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9992A961B4A00371F49 /* MyTodoApp.xcdatamodeld */; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		ABB7DA722A9725A200F4DA49 /* tilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tilVC.swift; sourceTree = "<group>"; };
 		ABB7DA752A9725E800F4DA49 /* todoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoVC.swift; sourceTree = "<group>"; };
+		ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHomeTitle.swift; sourceTree = "<group>"; };
+		ABCB6B402A98E8B8005F0F91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ABCB6B422A98EBE1005F0F91 /* setUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUserProfile.swift; sourceTree = "<group>"; };
 		ABE1F98D2A961B4A00371F49 /* MyTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE1F9902A961B4A00371F49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE1F9A92A961BEC00371F49 /* HomeVC.swift */,
+				ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */,
 				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
 				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
 				ABE1F9BB2A963B9400371F49 /* SetTableView.swift */,
@@ -128,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */,
+				ABCB6B422A98EBE1005F0F91 /* setUserProfile.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE1F9C52A96563700371F49 /* Tasks.swift */,
+				ABCB6B402A98E8B8005F0F91 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,13 +223,16 @@
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
 				ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */,
+				ABCB6B3F2A98E84A005F0F91 /* SetHomeTitle.swift in Sources */,
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
+				ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */,
 				ABB7DA732A9725A200F4DA49 /* tilVC.swift in Sources */,
 				ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */,
 				ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */,
 				ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */,
 				ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */,
+				ABCB6B432A98EBE1005F0F91 /* setUserProfile.swift in Sources */,
 				ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */,
 				ABE1F9C02A96517100371F49 /* CustomCell.swift in Sources */,
 				ABE1F9C62A96563700371F49 /* Tasks.swift in Sources */,

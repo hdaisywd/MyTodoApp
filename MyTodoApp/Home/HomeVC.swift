@@ -12,6 +12,9 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
+        /* Title View */
+        setHomeTitle()
+        
         /* 달력 */
         let today = getDate()
         setCalendar(year: today[0], month: today[1], date: today[2])
