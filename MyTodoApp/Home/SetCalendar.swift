@@ -40,19 +40,7 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)
         calendarView.selectionBehavior = dateSelection
     }
-
-    /* 달력에서 날짜 선택 처리 */
-    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        selection.setSelected(dateComponents, animated: true)
-        selectedDate = dateComponents
-
-        /* Date Detail 페이지 불러오기 */
-        let dateDetailVC = DateDetailVC(selectedDate)
-        self.present(dateDetailVC, animated: true)
-
-        reloadDateView(date: Calendar.current.date(from: dateComponents!))
-    }
-
+    
     /* 선택된 날짜들에 라벨 붙이기 */
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
         if let selectedDate = selectedDate, selectedDate == dateComponents {
@@ -66,8 +54,20 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         return nil
     }
 
+    /* 달력에서 날짜 선택 처리 */
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+        selection.setSelected(dateComponents, animated: true)
+        selectedDate = dateComponents
+
+        /* Date Detail 페이지 불러오기 */
+        let dateDetailVC = DateDetailVC(selectedDate)
+        self.present(dateDetailVC, animated: true)
+
+        reloadCalendarView(date: Calendar.current.date(from: dateComponents!))
+    }
+
     /* 날짜 선택 후 reload */
-    func reloadDateView(date: Date?) {
+    func reloadCalendarView(date: Date?) {
         if date == nil { return }
         let calendar = Calendar.current
         calendarView.reloadDecorations(forDateComponents: [calendar.dateComponents([.day, .month, .year], from: date!)], animated: true)

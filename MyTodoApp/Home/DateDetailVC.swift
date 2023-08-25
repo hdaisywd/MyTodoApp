@@ -8,7 +8,7 @@ class DateDetailVC: UIViewController {
     let day: Int?
     
     /* tableView */
-    let tableView = UITableView()
+    let myTableView = UITableView()
     let dateLabel = UILabel()
     let items: [String] = ["abc", "def", "ghi"]
     
@@ -30,7 +30,7 @@ class DateDetailVC: UIViewController {
         view.backgroundColor = .white
         
         setDateLabel()
-        setTableView()
+        //setTableView()
     }
 
 }

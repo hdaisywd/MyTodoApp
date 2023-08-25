@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABB7DA732A9725A200F4DA49 /* tilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA722A9725A200F4DA49 /* tilVC.swift */; };
+		ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA752A9725E800F4DA49 /* todoVC.swift */; };
 		ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9902A961B4A00371F49 /* AppDelegate.swift */; };
 		ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */; };
 		ABE1F99B2A961B4A00371F49 /* MyTodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9992A961B4A00371F49 /* MyTodoApp.xcdatamodeld */; };
@@ -17,13 +19,16 @@
 		ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */; };
 		ABE1F9AE2A961C3600371F49 /* DateDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */; };
 		ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */; };
-		ABE1F9B22A961C8100371F49 /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B12A961C8100371F49 /* TodoVC.swift */; };
-		ABE1F9B42A961C8A00371F49 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B32A961C8A00371F49 /* TodayVC.swift */; };
 		ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B52A961FA700371F49 /* Extension.swift */; };
 		ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BB2A963B9400371F49 /* SetTableView.swift */; };
+		ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BD2A96445000371F49 /* Constrains.swift */; };
+		ABE1F9C02A96517100371F49 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BF2A96517100371F49 /* CustomCell.swift */; };
+		ABE1F9C62A96563700371F49 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9C52A96563700371F49 /* Tasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABB7DA722A9725A200F4DA49 /* tilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tilVC.swift; sourceTree = "<group>"; };
+		ABB7DA752A9725E800F4DA49 /* todoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoVC.swift; sourceTree = "<group>"; };
 		ABE1F98D2A961B4A00371F49 /* MyTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE1F9902A961B4A00371F49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,10 +41,11 @@
 		ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCalendar.swift; sourceTree = "<group>"; };
 		ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailVC.swift; sourceTree = "<group>"; };
 		ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		ABE1F9B12A961C8100371F49 /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
-		ABE1F9B32A961C8A00371F49 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
 		ABE1F9B52A961FA700371F49 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ABE1F9BB2A963B9400371F49 /* SetTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableView.swift; sourceTree = "<group>"; };
+		ABE1F9BD2A96445000371F49 /* Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrains.swift; sourceTree = "<group>"; };
+		ABE1F9BF2A96517100371F49 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		ABE1F9C52A96563700371F49 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABB7DA712A97259400F4DA49 /* TIL */ = {
+			isa = PBXGroup;
+			children = (
+				ABB7DA722A9725A200F4DA49 /* tilVC.swift */,
+			);
+			path = TIL;
+			sourceTree = "<group>";
+		};
+		ABB7DA742A9725DA00F4DA49 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				ABB7DA752A9725E800F4DA49 /* todoVC.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
 		ABE1F9842A961B4A00371F49 = {
 			isa = PBXGroup;
 			children = (
@@ -76,14 +98,16 @@
 				ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */,
 				ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */,
 				ABE1F9B72A96204300371F49 /* Home */,
-				ABE1F9B92A96207A00371F49 /* Todo */,
-				ABE1F9BA2A96208500371F49 /* Today */,
+				ABB7DA712A97259400F4DA49 /* TIL */,
+				ABB7DA742A9725DA00F4DA49 /* Todo */,
 				ABE1F9B82A96206700371F49 /* Settings */,
+				ABE1F9C12A96556C00371F49 /* Models */,
 				ABE1F9B52A961FA700371F49 /* Extension.swift */,
 				ABE1F99C2A961B4C00371F49 /* Assets.xcassets */,
 				ABE1F99E2A961B4C00371F49 /* LaunchScreen.storyboard */,
 				ABE1F9A12A961B4C00371F49 /* Info.plist */,
 				ABE1F9992A961B4A00371F49 /* MyTodoApp.xcdatamodeld */,
+				ABE1F9BD2A96445000371F49 /* Constrains.swift */,
 			);
 			path = MyTodoApp;
 			sourceTree = "<group>";
@@ -95,6 +119,7 @@
 				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
 				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
 				ABE1F9BB2A963B9400371F49 /* SetTableView.swift */,
+				ABE1F9BF2A96517100371F49 /* CustomCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -107,20 +132,12 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		ABE1F9B92A96207A00371F49 /* Todo */ = {
+		ABE1F9C12A96556C00371F49 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ABE1F9B12A961C8100371F49 /* TodoVC.swift */,
+				ABE1F9C52A96563700371F49 /* Tasks.swift */,
 			);
-			path = Todo;
-			sourceTree = "<group>";
-		};
-		ABE1F9BA2A96208500371F49 /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				ABE1F9B32A961C8A00371F49 /* TodayVC.swift */,
-			);
-			path = Today;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,16 +211,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE1F9AE2A961C3600371F49 /* DateDetailVC.swift in Sources */,
-				ABE1F9B22A961C8100371F49 /* TodoVC.swift in Sources */,
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
 				ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */,
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
-				ABE1F9B42A961C8A00371F49 /* TodayVC.swift in Sources */,
+				ABB7DA732A9725A200F4DA49 /* tilVC.swift in Sources */,
+				ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */,
 				ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */,
 				ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */,
 				ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */,
+				ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */,
+				ABE1F9C02A96517100371F49 /* CustomCell.swift in Sources */,
+				ABE1F9C62A96563700371F49 /* Tasks.swift in Sources */,
 				ABE1F99B2A961B4A00371F49 /* MyTodoApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

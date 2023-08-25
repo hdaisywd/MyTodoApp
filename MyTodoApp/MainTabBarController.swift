@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         let firstVC = UINavigationController(rootViewController: HomeVC())
         firstVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "house"), tag: 0)
         // tab bar 아이콘 설정 2
-        let secondVC = UINavigationController(rootViewController: TodayVC())
+        let secondVC = UINavigationController(rootViewController: tilVC())
         secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "list.bullet"), tag: 1)
         // tab bar 아이콘 설정 3
         let thirdVC = UINavigationController(rootViewController: TodoVC())
