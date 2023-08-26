@@ -6,4 +6,5 @@ struct Tasks {
     let task: String?
     let pin: Bool
     let checkbox: Bool
+    let starred: Bool
 }

@@ -2,34 +2,35 @@
 import Foundation
 import UIKit
 
-extension SettingsVC {
+extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
-    func setItemsView() {
+    func setItemsTableView() {
+        itemsView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
+        itemsView.dataSource = self
+        itemsView.delegate = self
+        
+        itemsView.backgroundColor = .red
         view.addSubview(itemsView)
         itemsView.translatesAutoresizingMaskIntoConstraints = false
         
-        itemsView.backgroundColor = .red
-
         NSLayoutConstraint.activate([
-            itemsView.trailingAnchor.constraint(equalTo: userProfileView.trailingAnchor),
             itemsView.leadingAnchor.constraint(equalTo: userProfileView.leadingAnchor),
+            itemsView.trailingAnchor.constraint(equalTo: userProfileView.trailingAnchor),
             itemsView.topAnchor.constraint(equalTo: userProfileView.bottomAnchor, constant: 10),
-            itemsView.heightAnchor.constraint(equalToConstant: CGFloat(oneLabelHeight * 3 + 30))
+            itemsView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor)
         ])
     }
+    
+    /* Delegate, Data Source 상속 */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("items.count: ", items.count)
+        return items.count
+    }
 
-    func setNickNameChange() {
-        nickNameChangeLabel.text = "Change nickname"
-        nickNameChangeLabel.textAlignment = .center
-        nickNameChangeLabel.font = .boldSystemFont(ofSize: 25)
-        nickNameChangeLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(nickNameChangeLabel)
-        
-        NSLayoutConstraint.activate([
-            nickNameChangeLabel.trailingAnchor.constraint(equalTo: userProfileStackView.trailingAnchor),
-            nickNameChangeLabel.leadingAnchor.constraint(equalTo: userProfileStackView.leadingAnchor),
-            nickNameChangeLabel.topAnchor.constraint(equalTo: userProfileStackView.bottomAnchor, constant: 10)
-        ])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("cell 설정 진입")
+        let cell = itemsView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! CustomTableViewCell
+        cell.name.text = items[indexPath.row]
+        return cell
     }
 }

@@ -40,7 +40,7 @@ extension SettingsVC {
         NSLayoutConstraint.activate([
             userProfileStackView.leadingAnchor.constraint(equalTo: userProfileView.leadingAnchor, constant: 10),
             userProfileStackView.trailingAnchor.constraint(equalTo: userProfileView.trailingAnchor, constant: -10),
-            userProfileStackView.topAnchor.constraint(equalTo: userProfileView.topAnchor),
+            userProfileStackView.topAnchor.constraint(equalTo: userProfileView.topAnchor, constant: 10),
             userProfileStackView.bottomAnchor.constraint(lessThanOrEqualTo: userProfileView.bottomAnchor)
         ])
         

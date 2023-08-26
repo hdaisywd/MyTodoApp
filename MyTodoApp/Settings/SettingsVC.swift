@@ -13,21 +13,18 @@ class SettingsVC: UIViewController {
     public var profilePicture: UIImage?
     public var nickName: String?
     
-    /* Set Items View */
-    var itemsView = UIView()
-    let oneLabelHeight = 40
-    
     /* NickName Change */
-    var nickNameChangeButton = UIButton()
-    var nickNameChangeLabel = UILabel()
+    var nickNameChangeStr = "Change nickname"
     
     /* Dark/Light Mode */
-    var darkLightModeChangeButton = UIButton()
-    var darkLightModeChangeLabel = UILabel()
+    var darkLightModeChangeStr = "Dark mode / Light mode"
     
     /* AppLock */
-    var appLockButton = UIButton()
-    var appLockLabel = UILabel()
+    var appLockStr = "Lock app"
+    
+    /* Set Items Table View */
+    var itemsView = UITableView()
+    lazy var items = [ nickNameChangeStr, darkLightModeChangeStr, appLockStr ] // 최초 접근시 할당하도록
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +35,7 @@ class SettingsVC: UIViewController {
         
         /* User Profile */
         setUserProfile()
-        setItemsView()
+        setItemsTableView()
     }
 
 }

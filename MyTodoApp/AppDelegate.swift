@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         /* launch screen 최소 시간 보장 */
         Thread.sleep(forTimeInterval: 1)
+        FirebaseApp.configure()
         return true
     }
 
