@@ -5,7 +5,7 @@ import UIKit
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func setItemsTableView() {
-        itemsView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
+        itemsView.register(CustomSettingsCell.self, forCellReuseIdentifier: CustomSettingsCell.cellId)
         itemsView.dataSource = self
         itemsView.delegate = self
         
@@ -39,7 +39,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("cell 설정 진입")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! CustomSettingsCell
         cell.name.text = items[indexPath.row]
         return cell
     }

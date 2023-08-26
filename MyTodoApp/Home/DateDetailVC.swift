@@ -10,7 +10,7 @@ class DateDetailVC: UIViewController {
     /* tableView */
     let myTableView = UITableView()
     let dateLabel = UILabel()
-    let items: [String] = ["abc", "def", "ghi"]
+    let items = ["밥 먹기", "씻기", "양치하기"]
     
     let monthInEnglish = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
     
@@ -30,7 +30,7 @@ class DateDetailVC: UIViewController {
         view.backgroundColor = .white
         
         setDateLabel()
-        //setTableView()
+        setTableView()
     }
 
 }

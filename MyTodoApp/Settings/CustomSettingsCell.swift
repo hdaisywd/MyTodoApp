@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class CustomSettingsCell: UITableViewCell {
 
     static let cellId = "cellIdentifier"
 

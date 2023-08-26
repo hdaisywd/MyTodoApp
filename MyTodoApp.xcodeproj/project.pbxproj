@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB9749862A999DC600042286 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9749852A999DC600042286 /* CustomTableViewCell.swift */; };
+		AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9749852A999DC600042286 /* CustomSettingsCell.swift */; };
 		AB9749882A999FA700042286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9749872A999FA700042286 /* GoogleService-Info.plist */; };
 		AB97498B2A99A08600042286 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB97498A2A99A08600042286 /* FirebaseAnalytics */; };
 		AB97498D2A99A08600042286 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = AB97498C2A99A08600042286 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		ABB7DA732A9725A200F4DA49 /* tilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA722A9725A200F4DA49 /* tilVC.swift */; };
 		ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA752A9725E800F4DA49 /* todoVC.swift */; };
-		ABCB6B3F2A98E84A005F0F91 /* SetHomeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */; };
 		ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B402A98E8B8005F0F91 /* User.swift */; };
 		ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */; };
 		ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */; };
@@ -30,16 +29,15 @@
 		ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B52A961FA700371F49 /* Extension.swift */; };
 		ABE1F9BC2A963B9400371F49 /* SetTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BB2A963B9400371F49 /* SetTableView.swift */; };
 		ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BD2A96445000371F49 /* Constrains.swift */; };
-		ABE1F9C02A96517100371F49 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BF2A96517100371F49 /* CustomCell.swift */; };
+		ABE1F9C02A96517100371F49 /* CustomDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */; };
 		ABE1F9C62A96563700371F49 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9C52A96563700371F49 /* Tasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB9749852A999DC600042286 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AB9749852A999DC600042286 /* CustomSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsCell.swift; sourceTree = "<group>"; };
 		AB9749872A999FA700042286 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABB7DA722A9725A200F4DA49 /* tilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tilVC.swift; sourceTree = "<group>"; };
 		ABB7DA752A9725E800F4DA49 /* todoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoVC.swift; sourceTree = "<group>"; };
-		ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHomeTitle.swift; sourceTree = "<group>"; };
 		ABCB6B402A98E8B8005F0F91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserProfile.swift; sourceTree = "<group>"; };
 		ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetItemsView.swift; sourceTree = "<group>"; };
@@ -58,7 +56,7 @@
 		ABE1F9B52A961FA700371F49 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ABE1F9BB2A963B9400371F49 /* SetTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTableView.swift; sourceTree = "<group>"; };
 		ABE1F9BD2A96445000371F49 /* Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrains.swift; sourceTree = "<group>"; };
-		ABE1F9BF2A96517100371F49 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailViewCell.swift; sourceTree = "<group>"; };
 		ABE1F9C52A96563700371F49 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,11 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				ABE1F9A92A961BEC00371F49 /* HomeVC.swift */,
-				ABCB6B3E2A98E84A005F0F91 /* SetHomeTitle.swift */,
 				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
 				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
 				ABE1F9BB2A963B9400371F49 /* SetTableView.swift */,
-				ABE1F9BF2A96517100371F49 /* CustomCell.swift */,
+				ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,7 +145,7 @@
 				ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */,
 				ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */,
 				ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */,
-				AB9749852A999DC600042286 /* CustomTableViewCell.swift */,
+				AB9749852A999DC600042286 /* CustomSettingsCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -244,9 +241,8 @@
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
 				ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */,
-				ABCB6B3F2A98E84A005F0F91 /* SetHomeTitle.swift in Sources */,
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
-				AB9749862A999DC600042286 /* CustomTableViewCell.swift in Sources */,
+				AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
 				ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */,
 				ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */,
@@ -257,7 +253,7 @@
 				ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */,
 				ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */,
 				ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */,
-				ABE1F9C02A96517100371F49 /* CustomCell.swift in Sources */,
+				ABE1F9C02A96517100371F49 /* CustomDetailViewCell.swift in Sources */,
 				ABE1F9C62A96563700371F49 /* Tasks.swift in Sources */,
 				ABE1F99B2A961B4A00371F49 /* MyTodoApp.xcdatamodeld in Sources */,
 			);

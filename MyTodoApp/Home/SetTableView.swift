@@ -25,7 +25,7 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
 
-        self.myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        self.myTableView.register(CustomDetailViewCell.self, forCellReuseIdentifier: "TableViewCell")
         self.view.addSubview(self.myTableView)
         self.myTableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -44,7 +44,7 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
         
         cell.textLabel?.text = items[indexPath.row]
         
