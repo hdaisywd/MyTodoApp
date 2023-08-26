@@ -8,6 +8,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         itemsView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.cellId)
         itemsView.dataSource = self
         itemsView.delegate = self
+        
+        itemsView.isScrollEnabled = false
+        
+        setLayerForItemsView()
 
         view.addSubview(itemsView)
         itemsView.translatesAutoresizingMaskIntoConstraints = false
@@ -18,6 +22,13 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             itemsView.topAnchor.constraint(equalTo: userProfileView.bottomAnchor, constant: 10),
             itemsView.heightAnchor.constraint(equalToConstant: CGFloat(cellHeight * items.count))
         ])
+    }
+    
+    /* itemView 테두리 설정 */
+    func setLayerForItemsView() {
+        itemsView.layer.borderWidth = 0.5
+        itemsView.layer.borderColor = UIColor.gray.cgColor
+        itemsView.layer.cornerRadius = 10
     }
     
     /* Delegate, Data Source 상속 */
