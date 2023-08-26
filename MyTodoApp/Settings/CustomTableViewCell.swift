@@ -1,16 +1,10 @@
-//
-//  CustomTableViewCell.swift
-//  MyTodoApp
-//
-//  Created by Daisy Hong on 2023/08/26.
-//
 
 import Foundation
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    static let cellId = "CellId"
+    static let cellId = "cellIdentifier"
 
     var name = UILabel()
     
@@ -27,10 +21,9 @@ class CustomTableViewCell: UITableViewCell {
         self.addSubview(name)
         
         name.translatesAutoresizingMaskIntoConstraints = false
+        name.font = .systemFont(ofSize: 20)
         name.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        name.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        name.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     

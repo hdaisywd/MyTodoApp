@@ -24,6 +24,7 @@ class SettingsVC: UIViewController {
     
     /* Set Items Table View */
     var itemsView = UITableView()
+    var cellHeight = 50
     lazy var items = [ nickNameChangeStr, darkLightModeChangeStr, appLockStr ] // 최초 접근시 할당하도록
     
     override func viewDidLoad() {
