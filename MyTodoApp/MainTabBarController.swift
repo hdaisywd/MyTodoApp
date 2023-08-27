@@ -16,11 +16,11 @@ class MainTabBarController: UITabBarController {
         let firstVC = UINavigationController(rootViewController: HomeVC())
         firstVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "house"), tag: 0)
         // tab bar 아이콘 설정 2
-        let secondVC = UINavigationController(rootViewController: tilVC())
+        let secondVC = UINavigationController(rootViewController: TodoVC())
         secondVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "list.bullet"), tag: 1)
         // tab bar 아이콘 설정 3
-        let thirdVC = UINavigationController(rootViewController: TodoVC())
-        thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "square.stack.3d.down.forward"), tag: 2)
+        let thirdVC = UINavigationController(rootViewController: StarredListVC())
+        thirdVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "star"), tag: 2)
         // tab bar 아이콘 설정 4
         let fourthVC = UINavigationController(rootViewController: SettingsVC())
         fourthVC.tabBarItem = UITabBarItem(title: "", image: UIImage(systemName: "gearshape"), tag: 3)

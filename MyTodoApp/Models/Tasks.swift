@@ -3,8 +3,9 @@ import Foundation
 import UIKit
 
 struct Tasks {
+    let taskId: Int32
     let task: String?
-    let pin: Bool
     let checkbox: Bool
     let starred: Bool
+    let dueDate: Date
 }
