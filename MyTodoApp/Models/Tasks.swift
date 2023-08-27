@@ -7,5 +7,7 @@ struct Tasks {
     let task: String?
     let checkbox: Bool
     let starred: Bool
-    let dueDate: Date
+    let dueDateYear: Int
+    let dueDateMonth: Int
+    let dueDateDay: Int
 }

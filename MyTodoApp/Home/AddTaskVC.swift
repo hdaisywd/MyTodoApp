@@ -121,15 +121,16 @@ class AddTaskVC: UIViewController {
             return
         }
         
-        let saveDate = datePicker.date
+        // 날짜 좀 더 효과적으로 저장할 방법은 없을까..?
+        let saveDate = datePicker.date.formatted().split(separator: " ")[0].split(separator: "/").map{Int($0)!}
         
-        let newTask = Tasks(taskId: UUID().uuidString, task: saveTask, checkbox: false, starred: false, dueDate: saveDate)
+        let newTask = Tasks(taskId: UUID().uuidString, task: saveTask, checkbox: false, starred: false, dueDateYear: saveDate[2], dueDateMonth: saveDate[0], dueDateDay: saveDate[1])
         taskManager.createTask(task: newTask)
 
         // Read a task
         taskManager.readTask(taskID: newTask.taskId) { task in
             if let task = task {
-                print("Read task:", task)
+                print("Task Saved:", task)
             } else {
                 print("Task not found.")
             }
