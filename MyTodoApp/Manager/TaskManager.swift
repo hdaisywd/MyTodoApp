@@ -8,7 +8,7 @@ class TaskManager {
     var ref: DatabaseReference!
     
     init() {
-        ref = Database.database().reference()
+        ref = Database.database(url: "https://mytodoapp-85e4e-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
     }
     
     func createTask(task: Tasks) {

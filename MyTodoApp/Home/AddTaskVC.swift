@@ -20,6 +20,9 @@ class AddTaskVC: UIViewController {
     /* Save Button */
     let saveButton = UIButton(type: .roundedRect)
     
+    /* Save Manager */
+    let taskManager = TaskManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -93,6 +96,7 @@ class AddTaskVC: UIViewController {
         print(sender.date)
     }
     
+    /* Save Button */
     func setSaveButton() {
         saveButton.setTitle("Save", for: .normal)
         saveButton.setTitleColor(.white, for: .normal)
@@ -116,7 +120,19 @@ class AddTaskVC: UIViewController {
             print("task에 입력한 값이 없습니다.")
             return
         }
-    }
-    
+        
+        let saveDate = datePicker.date
+        
+        let newTask = Tasks(taskId: UUID().uuidString, task: saveTask, checkbox: false, starred: false, dueDate: saveDate)
+        taskManager.createTask(task: newTask)
 
+        // Read a task
+        taskManager.readTask(taskID: newTask.taskId) { task in
+            if let task = task {
+                print("Read task:", task)
+            } else {
+                print("Task not found.")
+            }
+        }
+    }
 }
