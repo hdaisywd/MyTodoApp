@@ -15,6 +15,7 @@
 		AB5F71552A9B364800C8A3A8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71542A9B364800C8A3A8 /* FirebaseDatabase */; };
 		AB5F71572A9B364800C8A3A8 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71562A9B364800C8A3A8 /* FirebaseDatabaseSwift */; };
 		AB5F71592A9B364800C8A3A8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71582A9B364800C8A3A8 /* FirebaseStorage */; };
+		AB5F715D2A9B4B6F00C8A3A8 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */; };
 		AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9749852A999DC600042286 /* CustomSettingsCell.swift */; };
 		AB9749882A999FA700042286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9749872A999FA700042286 /* GoogleService-Info.plist */; };
 		ABB7DA762A9725E800F4DA49 /* todoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7DA752A9725E800F4DA49 /* todoVC.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		AB5B71C72A9B2B7100B22E29 /* StarredListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredListVC.swift; sourceTree = "<group>"; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		AB9749852A999DC600042286 /* CustomSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsCell.swift; sourceTree = "<group>"; };
 		AB9749872A999FA700042286 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABB7DA752A9725E800F4DA49 /* todoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoVC.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				ABE1F9AD2A961C3600371F49 /* DateDetailVC.swift */,
 				ABE1F9BB2A963B9400371F49 /* SetTableView.swift */,
 				ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */,
+				AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */,
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */,
+				AB5F715D2A9B4B6F00C8A3A8 /* AddTaskVC.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
 				ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */,
 				ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */,

@@ -23,12 +23,12 @@ class HomeVC: UIViewController {
     /* navigation Bar 설정 */
     func setHomeTitle() {
         self.navigationItem.title = "Home"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.square"), style: .plain, target: self, action: #selector(addBarButtonAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addBarButtonAction))
     }
     
     /* add Task 화면과 연결 */
     @objc func addBarButtonAction() {
-        
+        present(AddTaskVC(), animated: true)
     }
 
 

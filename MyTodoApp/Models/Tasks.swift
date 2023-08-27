@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 struct Tasks {
-    let taskId: Int32
+    let taskId: String 
     let task: String?
     let checkbox: Bool
     let starred: Bool
