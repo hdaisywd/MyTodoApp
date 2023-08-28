@@ -39,12 +39,12 @@ class CustomDetailViewCell: UITableViewCell {
     }
     
     func setCheckBox() {
-        checkbox.setImage(UIImage(systemName: "circle"), for: .normal)
+        checkbox.setImage(UIImage(systemName: "circle")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal), for: .normal)
         checkbox.addTarget(self, action: #selector(checkboxAction), for: .touchUpInside)
     }
     
     func setStarred() {
-        starred.image = UIImage(systemName: "star.fill")
+        starred.image = UIImage(systemName: "star.fill")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
     }
     
     /* 연결된 db로 체크 정보 보내주기 */

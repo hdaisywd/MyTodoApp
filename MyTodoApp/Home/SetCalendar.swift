@@ -22,6 +22,9 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         calendarView.calendar = Calendar(identifier: .gregorian)
         calendarView.locale = Locale(identifier: "kr_KR")
         calendarView.fontDesign = .rounded
+        
+        /* 캘린더 색 정하기 */
+        calendarView.tintColor = .systemTeal
 
         /* 시작 일 정하기 */
         calendarView.visibleDateComponents = DateComponents(calendar: Calendar(identifier: .gregorian), year: year, month: month, day: date)

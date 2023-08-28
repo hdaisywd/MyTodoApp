@@ -50,7 +50,7 @@ class AddTaskVC: UIViewController {
     
     /* TaskField */
     func setTaskField() {
-        taskImageView.image = UIImage(systemName: "square.and.pencil")
+        taskImageView.image = UIImage(systemName: "square.and.pencil")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
         view.addSubview(taskImageView)
         taskImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -69,7 +69,7 @@ class AddTaskVC: UIViewController {
     
     /* Date Picker */
     func setDatePicker() {
-        datePickerImage.image = UIImage(systemName: "clock")
+        datePickerImage.image = UIImage(systemName: "clock")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
         datePickerImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(datePickerImage)
         NSLayoutConstraint.activate([
@@ -100,7 +100,7 @@ class AddTaskVC: UIViewController {
     func setSaveButton() {
         saveButton.setTitle("Save", for: .normal)
         saveButton.setTitleColor(.white, for: .normal)
-        saveButton.setBackgroundImage(UIImage(systemName: "rectangle.fill"), for: .normal)
+        saveButton.setBackgroundImage(UIImage(systemName: "rectangle.fill")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal), for: .normal)
         
         saveButton.addTarget(self, action: #selector(saveButtonAction), for: .touchUpInside)
         
