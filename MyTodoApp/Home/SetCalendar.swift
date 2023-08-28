@@ -67,6 +67,9 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         self.present(dateDetailVC, animated: true)
 
         reloadCalendarView(date: Calendar.current.date(from: dateComponents!))
+
+        /* 한 날짜를 여러번 선택 가능하게 해주는 코드 */
+        selection.setSelected(nil, animated: false)
     }
 
     /* 날짜 선택 후 reload */

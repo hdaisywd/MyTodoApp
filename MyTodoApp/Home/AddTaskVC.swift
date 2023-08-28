@@ -9,8 +9,10 @@ class AddTaskVC: UIViewController {
     let AddTaskTitle = UILabel()
     
     /* Task TextField */
-    let taskImageView = UIImageView()
-    let task = UITextField()
+    let titleLabel = UILabel()
+    let contentLabel = UILabel()
+    let titleTextField = UITextField()
+    let contentTextField = UITextField()
     let taskSaveButton = UIButton()
     
     /* Date Picker */
@@ -50,21 +52,41 @@ class AddTaskVC: UIViewController {
     
     /* TaskField */
     func setTaskField() {
-        taskImageView.image = UIImage(systemName: "square.and.pencil")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal)
-        view.addSubview(taskImageView)
-        taskImageView.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.text = "Title"
+        titleLabel.font = .systemFont(ofSize: 20)
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            taskImageView.leadingAnchor.constraint(equalTo: AddTaskTitle.leadingAnchor),
-            taskImageView.topAnchor.constraint(equalTo: AddTaskTitle.bottomAnchor, constant: 10)
+            titleLabel.leadingAnchor.constraint(equalTo: AddTaskTitle.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: AddTaskTitle.bottomAnchor, constant: 20)
         ])
         
-        task.placeholder = "Please enter a task."
-        view.addSubview(task)
-        task.translatesAutoresizingMaskIntoConstraints = false
+        titleTextField.placeholder = "Please enter a title."
+        view.addSubview(titleTextField)
+        titleTextField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            task.leadingAnchor.constraint(equalTo: taskImageView.trailingAnchor, constant: 5),
-            task.topAnchor.constraint(equalTo: taskImageView.topAnchor)
+            titleTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            titleTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5)
         ])
+        
+        contentLabel.text = "Content"
+        contentLabel.font = .systemFont(ofSize: 20)
+        view.addSubview(contentLabel)
+        contentLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentLabel.leadingAnchor.constraint(equalTo: titleTextField.leadingAnchor),
+            contentLabel.topAnchor.constraint(equalTo: titleTextField.bottomAnchor, constant: 10)
+        ])
+        
+        contentTextField.placeholder = "Please enter a content."
+        view.addSubview(contentTextField)
+        contentTextField.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentTextField.leadingAnchor.constraint(equalTo: contentLabel.leadingAnchor),
+            contentTextField.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 10)
+        ])
+        
+        
     }
     
     /* Date Picker */
@@ -73,8 +95,8 @@ class AddTaskVC: UIViewController {
         datePickerImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(datePickerImage)
         NSLayoutConstraint.activate([
-            datePickerImage.leadingAnchor.constraint(equalTo: taskImageView.leadingAnchor),
-            datePickerImage.topAnchor.constraint(equalTo: taskImageView.bottomAnchor, constant: 10)
+            datePickerImage.leadingAnchor.constraint(equalTo: contentTextField.leadingAnchor),
+            datePickerImage.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 20)
         ])
         
         datePicker.preferredDatePickerStyle = .automatic
@@ -116,15 +138,30 @@ class AddTaskVC: UIViewController {
     
     /* str 에러 처리는 나중에 생각해보자... 일단 저장하는 방법부터! */
     @objc private func saveButtonAction() {
-        guard let saveTask = task.text else {
+        guard let saveTitle = titleTextField.text else {
             print("task에 입력한 값이 없습니다.")
+            return
+        }
+        
+        guard let saveContent = contentTextField.text else {
+            print("content에 입력한 값이 없습니다.")
             return
         }
         
         // 날짜 좀 더 효과적으로 저장할 방법은 없을까..?
         let saveDate = datePicker.date.formatted().split(separator: " ")[0].split(separator: "/").map{Int($0)!}
         
-        let newTask = Tasks(taskId: UUID().uuidString, task: saveTask, checkbox: false, starred: false, dueDateYear: saveDate[2], dueDateMonth: saveDate[0], dueDateDay: saveDate[1])
+        let newTask = Task(
+            taskId: UUID().uuidString,
+            title: saveTitle,
+            content: saveContent,
+            checkbox: false,
+            starred: false,
+            dueDateYear: saveDate[2],
+            dueDateMonth: saveDate[0],
+            dueDateDay: saveDate[1]
+        )
+
         taskManager.createTask(task: newTask)
 
         // Read a task

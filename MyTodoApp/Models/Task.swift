@@ -2,9 +2,10 @@
 import Foundation
 import UIKit
 
-struct Tasks {
-    let taskId: String 
-    let task: String?
+struct Task {
+    let taskId: String
+    let title: String
+    let content: String
     let checkbox: Bool
     let starred: Bool
     let dueDateYear: Int
