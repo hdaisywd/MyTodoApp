@@ -4,6 +4,22 @@ import UIKit
 
 extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     
+    /* 날짜에 맞는 task 불러오기 */
+    func loadDateData() {
+        let taskManager = TaskManager()
+
+        taskManager.readAllTasks { tasks in
+            for task in tasks {
+                if task.dueDateYear == self.year && task.dueDateMonth == self.month && task.dueDateDay == self.day {
+                    print(task)
+                    self.items.append(task)
+                }
+            }
+        }
+        
+        print(self.items)
+    }
+    
     /* 날짜 안내를 위한 라벨 */
     /* 옵셔널 벗기는 방법 */
     func setDateLabel() {
@@ -46,7 +62,13 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
-        cell.task.text = items[indexPath.row]
+        
+        cell.titleLabel.text = items[indexPath.row].title
+        cell.contentLabel.text = items[indexPath.row].content
+        
+        if items[indexPath.row].starred == false {
+            cell.starred.isHidden = true 
+        }
 
         return cell
     }

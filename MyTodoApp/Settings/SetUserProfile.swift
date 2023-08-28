@@ -13,10 +13,6 @@ extension SettingsVC {
     func setUserProfileView() {
         view.addSubview(userProfileView)
 
-        userProfileView.layer.borderWidth = 0.5
-        userProfileView.layer.borderColor = UIColor.gray.cgColor
-        userProfileView.layer.cornerRadius = 10
-        
         userProfileView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

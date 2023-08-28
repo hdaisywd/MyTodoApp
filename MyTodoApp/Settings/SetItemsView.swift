@@ -38,7 +38,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cell 설정 진입")
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! CustomSettingsCell
         cell.name.text = items[indexPath.row]
         return cell
@@ -46,7 +45,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     /* tableView Cell 높이 설정 */
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("cell 높이 설정")
         return CGFloat(cellHeight)
     }
 }

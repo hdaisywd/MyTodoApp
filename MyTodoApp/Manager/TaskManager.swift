@@ -57,6 +57,36 @@ class TaskManager {
               }
           }
       }
+    
+    func readAllTasks(completion: @escaping ([Task]) -> Void) {
+        ref.child("tasks").observeSingleEvent(of: .value) { snapshot in
+            var tasks: [Task] = []
+            
+            for case let childSnapshot as DataSnapshot in snapshot.children {
+                if let taskDict = childSnapshot.value as? [String: Any],
+                   let taskId = taskDict["taskId"] as? String,
+                   let title = taskDict["title"] as? String,
+                   let content = taskDict["content"] as? String,
+                   let checkbox = taskDict["checkbox"] as? Bool,
+                   let starred = taskDict["starred"] as? Bool,
+                   let dueDateYear = taskDict["dueDateYear"] as? Int,
+                   let dueDateMonth = taskDict["dueDateMonth"] as? Int,
+                   let dueDateDay = taskDict["dueDateDay"] as? Int {
+                    let task = Task(taskId: taskId,
+                                    title: title,
+                                    content: content,
+                                    checkbox: checkbox,
+                                    starred: starred,
+                                    dueDateYear: dueDateYear,
+                                    dueDateMonth: dueDateMonth,
+                                    dueDateDay: dueDateDay)
+                    tasks.append(task)
+                }
+            }
+            
+            completion(tasks)
+        }
+    }
       
       func updateTask(taskID: String, updatedTask: Task) {
           let taskData: [String: Any] = [

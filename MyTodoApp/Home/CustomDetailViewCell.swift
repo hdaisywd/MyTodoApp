@@ -4,8 +4,10 @@ import UIKit
 
 class CustomDetailViewCell: UITableViewCell {
     
+    /* content도 화면에 표시할 방법 찾아보기 */
     let checkbox = UIButton()
-    let task = UILabel()
+    let titleLabel = UILabel()
+    let contentLabel = UILabel()
     let starred = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -22,11 +24,11 @@ class CustomDetailViewCell: UITableViewCell {
     func cellLayout() {
         self.addSubview(starred)
         self.addSubview(checkbox)
-        self.addSubview(task)
+        self.addSubview(titleLabel)
         
         starred.translatesAutoresizingMaskIntoConstraints = false
         checkbox.translatesAutoresizingMaskIntoConstraints = false
-        task.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         starred.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         starred.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
@@ -34,8 +36,9 @@ class CustomDetailViewCell: UITableViewCell {
         checkbox.leadingAnchor.constraint(equalTo: starred.trailingAnchor, constant: 10).isActive = true
         checkbox.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        task.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 10).isActive = true
-        task.centerYAnchor.constraint(equalTo: checkbox.centerYAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 5).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: checkbox.centerYAnchor).isActive = true
+
     }
     
     func setCheckBox() {
