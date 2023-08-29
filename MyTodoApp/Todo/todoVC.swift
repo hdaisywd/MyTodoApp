@@ -24,15 +24,21 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         setDateLabel()
         getDate()
+        setTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadDateData{ self.setTableView() }
-//        DispatchQueue.main.async {
-//            self.myTableView.reloadData()
-//        }
+        loadDateData{
+            self.myTableView.reloadData()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        items = [Task]()
     }
     
     func getDate() {

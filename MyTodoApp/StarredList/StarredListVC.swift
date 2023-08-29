@@ -26,7 +26,7 @@ class StarredListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Today Todo"
+        self.navigationItem.title = "Starred List"
         
         setLabel()
     }
