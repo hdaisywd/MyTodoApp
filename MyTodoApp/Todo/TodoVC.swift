@@ -43,9 +43,9 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        var todoItems = [Task]()
-        var starreditems = [Task]()
-        var doneItems = [Task]()
+        todoItems = [Task]()
+        starreditems = [Task]()
+        doneItems = [Task]()
     }
     
     /* 날짜 가져오기 */
@@ -143,7 +143,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     /* Swipe Actions */
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         var item: Task
 
