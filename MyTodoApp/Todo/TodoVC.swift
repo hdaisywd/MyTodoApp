@@ -100,19 +100,19 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.myTableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            myTableView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 20),
+            myTableView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 5),
             myTableView.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor),
             myTableView.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
             myTableView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor)
         ])
     }
     
-    /* tableView  */
+    /* tableView */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         print("cell 설정 시작")
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
-
+        
         if (indexPath.section == 0 ) {
             cell.titleStr = starreditems[indexPath.row].title
             cell.contentStr = starreditems[indexPath.row].content
@@ -123,7 +123,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.titleStr = doneItems[indexPath.row].title
             cell.contentStr = doneItems[indexPath.row].title
         }
-
+        
         return cell
     }
     
@@ -150,9 +150,10 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 { item =  starreditems[indexPath.row] }
         else if indexPath.section == 1 { item = todoItems[indexPath.row] }
         else { item = doneItems[indexPath.row] }
-
+        
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
             taskManager.deleteTask(taskID: item.taskId)
+            self.reloadTableView()
             success(true)
         }
         deleteAction.image = UIImage(systemName: "xmark")
@@ -168,11 +169,19 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                    dueDateDay: item.dueDateDay)
 
             taskManager.updateTask(taskID: item.taskId, updatedTask: updatedTask)
+            self.reloadTableView()
             success(true)
         }
         starredAction.image = UIImage(systemName: "star")
 
         return UISwipeActionsConfiguration(actions: [deleteAction, starredAction])
+    }
+    
+    /* Swipe 후 reload 되게 수정 */
+    func reloadTableView() {
+        loadDateData{
+            self.myTableView.reloadData()
+        }
     }
 
 }
