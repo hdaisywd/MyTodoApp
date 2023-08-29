@@ -15,17 +15,12 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
             for task in tasks {
                 if task.dueDateYear == self.year && task.dueDateMonth == self.month && task.dueDateDay == self.day {
                     self.items.append(task)
-                    print(task)
-                    print("아직 for문 안입니다")
                 }
             }
-
-            // 모든 작업이 완료된 후 completion() 호출
-            print("for문 탈출!")
-            print(self.items)
+            
             completion()
         }
-    }
+    } 
 
     
     /* 날짜 안내를 위한 라벨 */
@@ -48,6 +43,8 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     func setTableView() {
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
+        
+        myTableView.separatorStyle = .none
 
         self.myTableView.register(CustomDetailViewCell.self, forCellReuseIdentifier: "TableViewCell")
         self.view.addSubview(self.myTableView)
@@ -64,22 +61,25 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     
     /* tableView  */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.items)
-        print("items count: ", self.items.count)
-        
         return self.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        print("tableView 실행")
-
+        print("cell 설정 시작")
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
+
+        cell.titleStr = items[indexPath.row].title
+        cell.contentStr = items[indexPath.row].content
         
-        cell.titleLabel.text = items[indexPath.row].title
-        cell.contentLabel.text = items[indexPath.row].content
+        
+        print(items[indexPath.row].title, items[indexPath.row].content)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 }

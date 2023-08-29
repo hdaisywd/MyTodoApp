@@ -32,7 +32,6 @@ class DateDetailVC: UIViewController {
         view.backgroundColor = .white
         
         setDateLabel()
-        
         loadDateData{ self.setTableView() }
     }
 
