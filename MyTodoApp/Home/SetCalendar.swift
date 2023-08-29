@@ -48,8 +48,6 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
         var dates = [[Int]]()
         
-        let taskManager = TaskManager()
-        
         taskManager.readAllTasks { tasks in
             for task in tasks {
                 dates.append([task.dueDateDay, task.dueDateMonth, task.dueDateYear])

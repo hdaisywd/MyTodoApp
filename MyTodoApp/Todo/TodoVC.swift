@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     let dateLabel = UILabel()
     let myTableView = UITableView()
     
@@ -19,7 +19,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.navigationItem.title = "Today Todo"
         
         setDateLabel()
@@ -41,6 +41,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         items = [Task]()
     }
     
+    /* 날짜 가져오기 */
     func getDate() {
         let now = Date().formatted().split(separator: " ")[0].split(separator: "/")
         month = Int(now[0]) ?? 1998
@@ -48,6 +49,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         year = Int(now[2]) ?? 8
     }
     
+    /* Data 불러오기 */
     func loadDateData(completion: @escaping () -> Void) {
         let taskManager = TaskManager()
 
@@ -59,7 +61,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.items.append(task)
                 }
             }
-
+            
             completion()
         }
     }
@@ -113,4 +115,34 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    
+    /* Swipe Actions */
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration {
+        
+        let item = items[indexPath.row]
+    
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, success in
+            taskManager.deleteTask(taskID: item.taskId)
+            success(true)
+        }
+        deleteAction.image = UIImage(systemName: "xmark")
+        
+        let starredAction = UIContextualAction(style: .normal, title: "Favorite") { [weak self] _, _, success in
+            let updatedTask = Task(taskId: item.taskId,
+                                   title: item.title,
+                                   content: item.content,
+                                   checkbox: item.checkbox,
+                                   starred: true,
+                                   dueDateYear: item.dueDateYear,
+                                   dueDateMonth: item.dueDateMonth,
+                                   dueDateDay: item.dueDateDay)
+        
+            taskManager.updateTask(taskID: item.taskId, updatedTask: updatedTask)
+            success(true)
+        }
+        starredAction.image = UIImage(systemName: "star")
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, starredAction])
+    }
+
 }
