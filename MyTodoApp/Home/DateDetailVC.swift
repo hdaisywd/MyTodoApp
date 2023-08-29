@@ -31,11 +31,9 @@ class DateDetailVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        loadDateData()
-        /* Data load 다 하고 화면 로드할 수 있게 해주는 방법 생각해보기 */
-        Thread.sleep(forTimeInterval: 1)
         setDateLabel()
-        setTableView()
+        
+        loadDateData{ self.setTableView() }
     }
 
 }
