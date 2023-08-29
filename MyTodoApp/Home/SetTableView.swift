@@ -74,8 +74,4 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100 // 예상 셀 높이를 설정
-    }
 }
