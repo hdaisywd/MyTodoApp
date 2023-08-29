@@ -43,8 +43,6 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
     func setTableView() {
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
-        
-        myTableView.separatorStyle = .none
 
         self.myTableView.register(CustomDetailViewCell.self, forCellReuseIdentifier: "TableViewCell")
         self.view.addSubview(self.myTableView)
@@ -71,15 +69,13 @@ extension DateDetailVC: UITableViewDelegate, UITableViewDataSource {
 
         cell.titleStr = items[indexPath.row].title
         cell.contentStr = items[indexPath.row].content
-        
-        
+
         print(items[indexPath.row].title, items[indexPath.row].content)
 
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100 // 예상 셀 높이를 설정
+    }
 }

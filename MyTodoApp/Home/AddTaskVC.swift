@@ -164,7 +164,6 @@ class AddTaskVC: UIViewController {
 
         taskManager.createTask(task: newTask)
 
-        // Read a task
         taskManager.readTask(taskID: newTask.taskId) { task in
             if let task = task {
                 print("Task Saved:", task)
@@ -172,5 +171,7 @@ class AddTaskVC: UIViewController {
                 print("Task not found.")
             }
         }
+        
+        dismiss(animated: true)
     }
 }

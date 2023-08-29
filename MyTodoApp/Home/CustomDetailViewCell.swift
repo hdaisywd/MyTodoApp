@@ -45,6 +45,7 @@ class CustomDetailViewCell: UITableViewCell {
         
         titleLabel.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 5).isActive = true
         titleLabel.topAnchor.constraint(equalTo: checkbox.topAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10).isActive = true
     }
     
     func setCheckBox() {
@@ -60,4 +61,5 @@ class CustomDetailViewCell: UITableViewCell {
         
         titleLabel.attributedText = attributedText
     }
+
 }
