@@ -27,9 +27,12 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         loadDateData{ self.setTableView() }
+//        DispatchQueue.main.async {
+//            self.myTableView.reloadData()
+//        }
     }
     
     func getDate() {
@@ -46,7 +49,6 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             guard let self = self else { return } 
 
             for task in tasks {
-                print(task)
                 if task.dueDateYear == self.year && task.dueDateMonth == self.month && task.dueDateDay == self.day {
                     self.items.append(task)
                 }

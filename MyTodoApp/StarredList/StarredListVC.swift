@@ -44,7 +44,6 @@ class StarredListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             guard let self = self else { return }  // 약한 참조 해제 시 nil이 될 수 있으므로, guard 문으로 self 옵셔널 바인딩
 
             for task in tasks {
-                print(task)
                 if task.starred == true {
                     self.items.append(task)
                 }
