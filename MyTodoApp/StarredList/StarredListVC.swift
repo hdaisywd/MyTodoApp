@@ -29,6 +29,11 @@ class StarredListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.navigationItem.title = "Today Todo"
         
         setLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         loadStarredData{ self.setTableView() }
     }
 
@@ -97,9 +102,5 @@ class StarredListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         print(items[indexPath.row].title, items[indexPath.row].content)
 
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100 // 예상 셀 높이를 설정
     }
 }

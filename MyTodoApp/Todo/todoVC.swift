@@ -16,14 +16,19 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var items = [Task]()
     
     let monthInEnglish = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Today Todo"
         
-        setDateLabel() 
+        setDateLabel()
         getDate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         loadDateData{ self.setTableView() }
     }
     
@@ -38,7 +43,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let taskManager = TaskManager()
 
         taskManager.readAllTasks { [weak self] tasks in
-            guard let self = self else { return }  // 약한 참조 해제 시 nil이 될 수 있으므로, guard 문으로 self 옵셔널 바인딩
+            guard let self = self else { return } 
 
             for task in tasks {
                 print(task)
@@ -99,9 +104,5 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print(items[indexPath.row].title, items[indexPath.row].content)
 
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100 // 예상 셀 높이를 설정
     }
 }
