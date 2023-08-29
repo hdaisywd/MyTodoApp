@@ -13,7 +13,12 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var day = 0
     
     /* table view task */
-    var items = [Task]()
+    var todoItems = [Task]()
+    var starreditems = [Task]()
+    var doneItems = [Task]()
+    
+    /* sections */
+    let sections = ["Starred", "To do", "Done"]
     
     let monthInEnglish = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
     
@@ -38,7 +43,9 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        items = [Task]()
+        var todoItems = [Task]()
+        var starreditems = [Task]()
+        var doneItems = [Task]()
     }
     
     /* 날짜 가져오기 */
@@ -58,7 +65,9 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
             for task in tasks {
                 if task.dueDateYear == self.year && task.dueDateMonth == self.month && task.dueDateDay == self.day {
-                    self.items.append(task)
+                    if task.starred == true { self.starreditems.append(task) }
+                    else if task.checkbox == true { self.doneItems.append(task) }
+                    else { self.todoItems.append(task) }
                 }
             }
             
@@ -99,49 +108,70 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     /* tableView  */
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         print("cell 설정 시작")
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
 
-        cell.titleStr = items[indexPath.row].title
-        cell.contentStr = items[indexPath.row].content
-
-        print(items[indexPath.row].title, items[indexPath.row].content)
+        if (indexPath.section == 0 ) {
+            cell.titleStr = starreditems[indexPath.row].title
+            cell.contentStr = starreditems[indexPath.row].content
+        } else if (indexPath.section == 1) {
+            cell.titleStr = todoItems[indexPath.row].title
+            cell.contentStr = todoItems[indexPath.row].content
+        } else {
+            cell.titleStr = doneItems[indexPath.row].title
+            cell.contentStr = doneItems[indexPath.row].title
+        }
 
         return cell
+    }
+    
+    /* Sections 구현 */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count 
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (section == 0) { return starreditems.count }
+        if (section == 1) { return todoItems.count }
+        return doneItems.count
     }
     
     /* Swipe Actions */
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration {
         
-        let item = items[indexPath.row]
-    
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, success in
+        var item: Task
+
+        if indexPath.section == 0 { item =  starreditems[indexPath.row] }
+        else if indexPath.section == 1 { item = todoItems[indexPath.row] }
+        else { item = doneItems[indexPath.row] }
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
             taskManager.deleteTask(taskID: item.taskId)
             success(true)
         }
         deleteAction.image = UIImage(systemName: "xmark")
-        
-        let starredAction = UIContextualAction(style: .normal, title: "Favorite") { [weak self] _, _, success in
+
+        let starredAction = UIContextualAction(style: .normal, title: "Favorite") { action, view, success in
             let updatedTask = Task(taskId: item.taskId,
                                    title: item.title,
                                    content: item.content,
                                    checkbox: item.checkbox,
-                                   starred: true,
+                                   starred: !item.starred,
                                    dueDateYear: item.dueDateYear,
                                    dueDateMonth: item.dueDateMonth,
                                    dueDateDay: item.dueDateDay)
-        
+
             taskManager.updateTask(taskID: item.taskId, updatedTask: updatedTask)
             success(true)
         }
         starredAction.image = UIImage(systemName: "star")
-        
+
         return UISwipeActionsConfiguration(actions: [deleteAction, starredAction])
     }
 
