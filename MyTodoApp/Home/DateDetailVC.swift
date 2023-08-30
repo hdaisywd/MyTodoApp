@@ -11,10 +11,10 @@ class DateDetailVC: TodoTableVC {
     let monthInEnglish = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ]
     
     /* 초기화 */
-    init(_ dateComponents: DateComponents?) {
-        self.year = dateComponents?.year
-        self.month = dateComponents?.month
-        self.day = dateComponents?.day
+    init(_ year: Int, _ month: Int, _ day: Int) {
+        self.year = year
+        self.month = month
+        self.day = day
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -15,10 +15,8 @@ class HomeVC: UIViewController {
 
         /* Title View */
         setHomeTitle()
-        
-        /* 달력 */
-        let today = getDate()
-        setCalendar(year: today[0], month: today[1], date: today[2])
+
+        setCalendar()
     }
     
     /* navigation Bar 설정 */
