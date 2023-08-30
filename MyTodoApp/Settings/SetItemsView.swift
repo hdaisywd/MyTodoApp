@@ -5,8 +5,6 @@ import UIKit
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func setItemsTableView() {
-        itemsView.backgroundColor = .black
-        
         itemsView.register(CustomSettingsCell.self, forCellReuseIdentifier: CustomSettingsCell.cellId)
         itemsView.dataSource = self
         itemsView.delegate = self
@@ -40,8 +38,14 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! CustomSettingsCell
         cell.name.text = items[indexPath.row]
+        
+        /* cell 자잘한 설정 */
+        cell.backgroundColor = .black
+        cell.selectionStyle = .none
+        
         return cell
     }
     
