@@ -28,7 +28,8 @@ class CustomDetailViewCell: UITableViewCell {
         setTitleLabel()
         cellLayout()
 
-        self.contentView.backgroundColor = .systemTeal
+        // self.contentView.backgroundColor = .systemTeal
+        
     }
     
     required init?(coder: NSCoder) {
@@ -51,7 +52,7 @@ class CustomDetailViewCell: UITableViewCell {
     }
     
     func setCheckBox() {
-        checkbox.setImage(UIImage(systemName: "circle")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal), for: .normal)
+        checkbox.setImage(UIImage(systemName: "circle")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
     func setTitleLabel() {

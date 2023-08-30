@@ -133,6 +133,9 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.contentStr = doneItems[indexPath.row].title
         }
         
+        /* 여기서 하면 되는데 커스텀셀 클래스에서 하면 안댐 */
+        cell.backgroundColor = .systemMint
+        
         return cell
     }
     
@@ -143,6 +146,11 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        return
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -207,7 +215,8 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.reloadTableView()
             success(true)
         }
-        starredAction.image = UIImage(systemName: "star")
+        starredAction.image = UIImage(systemName: "star.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
+        starredAction.backgroundColor = .systemBlue
 
         return UISwipeActionsConfiguration(actions: [deleteAction, starredAction])
     }
