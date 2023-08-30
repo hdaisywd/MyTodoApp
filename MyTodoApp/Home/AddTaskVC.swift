@@ -27,7 +27,7 @@ class AddTaskVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         setAddTaskTitle()
         setTaskField()
@@ -39,6 +39,7 @@ class AddTaskVC: UIViewController {
     func setAddTaskTitle() {
         AddTaskTitle.text = "Add Task"
         AddTaskTitle.font = UIFont.boldSystemFont(ofSize: 30)
+        AddTaskTitle.textColor = .white
         
         view.addSubview(AddTaskTitle)
         AddTaskTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -54,6 +55,7 @@ class AddTaskVC: UIViewController {
     func setTaskField() {
         titleLabel.text = "Title"
         titleLabel.font = .systemFont(ofSize: 20)
+        titleLabel.textColor = .white
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -71,6 +73,7 @@ class AddTaskVC: UIViewController {
         
         contentLabel.text = "Content"
         contentLabel.font = .systemFont(ofSize: 20)
+        contentLabel.textColor = .white
         view.addSubview(contentLabel)
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -99,6 +102,11 @@ class AddTaskVC: UIViewController {
             datePickerImage.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 20)
         ])
         
+        /* datePicker 디자인 */
+        datePicker.backgroundColor = .systemTeal
+        datePicker.layer.cornerRadius = 10
+        datePicker.layer.masksToBounds = true
+        
         datePicker.preferredDatePickerStyle = .automatic
         datePicker.datePickerMode = .date
         datePicker.locale = Locale(identifier: "ko-KR")
@@ -106,10 +114,10 @@ class AddTaskVC: UIViewController {
         datePicker.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
         
         view.addSubview(datePicker)
-
+        
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            datePicker.leadingAnchor.constraint(equalTo: datePickerImage.trailingAnchor, constant: 5),
+            datePicker.leadingAnchor.constraint(equalTo: datePickerImage.trailingAnchor, constant: 10),
             datePicker.centerYAnchor.constraint(equalTo: datePickerImage.centerYAnchor)
         ])
     }
@@ -121,7 +129,7 @@ class AddTaskVC: UIViewController {
     /* Save Button */
     func setSaveButton() {
         saveButton.setTitle("Save", for: .normal)
-        saveButton.setTitleColor(.white, for: .normal)
+        saveButton.setTitleColor(.black, for: .normal)
         saveButton.setBackgroundImage(UIImage(systemName: "rectangle.fill")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal), for: .normal)
         
         saveButton.addTarget(self, action: #selector(saveButtonAction), for: .touchUpInside)

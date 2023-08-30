@@ -5,6 +5,8 @@ import UIKit
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func setItemsTableView() {
+        itemsView.backgroundColor = .black
+        
         itemsView.register(CustomSettingsCell.self, forCellReuseIdentifier: CustomSettingsCell.cellId)
         itemsView.dataSource = self
         itemsView.delegate = self
@@ -27,7 +29,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     /* itemView 테두리 설정 */
     func setLayerForItemsView() {
         itemsView.layer.borderWidth = 0.5
-        itemsView.layer.borderColor = UIColor.gray.cgColor
+        itemsView.layer.borderColor = UIColor.systemTeal.cgColor
         itemsView.layer.cornerRadius = 10
     }
     

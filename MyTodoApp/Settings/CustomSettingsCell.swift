@@ -22,6 +22,7 @@ class CustomSettingsCell: UITableViewCell {
         
         name.translatesAutoresizingMaskIntoConstraints = false
         name.font = .systemFont(ofSize: 20)
+        name.textColor = .white
         name.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }

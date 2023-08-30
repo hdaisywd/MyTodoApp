@@ -65,6 +65,7 @@ extension SettingsVC {
         nickName = setNickName()
         nickNameLabel.text = nickName
         nickNameLabel.font = .boldSystemFont(ofSize: 25)
+        nickNameLabel.textColor = .white
         nickNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         userProfileStackView.addArrangedSubview(nickNameLabel)

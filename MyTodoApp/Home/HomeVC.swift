@@ -10,7 +10,7 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
 
         /* Title View */
         setHomeTitle()
@@ -24,6 +24,7 @@ class HomeVC: UIViewController {
     func setHomeTitle() {
         self.navigationItem.title = "Home"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus")?.withTintColor(.systemTeal, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(addBarButtonAction))
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     /* add Task 화면과 연결 */

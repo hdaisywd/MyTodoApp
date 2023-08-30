@@ -23,7 +23,12 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         calendarView.locale = Locale(identifier: "kr_KR")
         calendarView.fontDesign = .rounded
         
+        /* CalendarView Rounded Edges */
+        calendarView.layer.cornerCurve = .continuous
+        calendarView.layer.cornerRadius = 10.0
+        
         /* 캘린더 색 정하기 */
+        calendarView.backgroundColor = .secondarySystemBackground
         calendarView.tintColor = .systemTeal
         
         /* 시작 일 정하기 */
@@ -34,10 +39,10 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         calendarView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            calendarView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            calendarView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             calendarView.heightAnchor.constraint(equalToConstant: 500),
-            calendarView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            calendarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+            calendarView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+            calendarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10)
         ])
         
         let dateSelection = UICalendarSelectionSingleDate(delegate: self)

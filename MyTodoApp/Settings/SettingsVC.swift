@@ -29,11 +29,12 @@ class SettingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         /* NavigationBar Title */
         self.navigationItem.title = "Settings"
-        
+        navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
         /* User Profile */
         setUserProfile()
         setItemsTableView()

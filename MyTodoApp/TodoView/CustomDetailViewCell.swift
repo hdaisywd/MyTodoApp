@@ -5,7 +5,7 @@ import UIKit
 class CustomDetailViewCell: UITableViewCell {
     
     /* content도 화면에 표시할 방법 찾아보기 */
-    let checkbox = UIButton()
+    let checkboxButton = UIButton()
     let titleLabel = UILabel()
     
     /* init은 셀이 초기화 될때만 호출됨. 재사용될때마다 내용이 바뀌어야한다. */
@@ -24,12 +24,9 @@ class CustomDetailViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         print("customcell init")
-        setCheckBox()
+        setCheckboxButton()
         setTitleLabel()
         cellLayout()
-
-        // self.contentView.backgroundColor = .systemTeal
-        
     }
     
     required init?(coder: NSCoder) {
@@ -37,22 +34,23 @@ class CustomDetailViewCell: UITableViewCell {
     }
     
     func cellLayout() {
-        self.addSubview(checkbox)
+        self.addSubview(checkboxButton)
         self.addSubview(titleLabel)
 
-        checkbox.translatesAutoresizingMaskIntoConstraints = false
+        checkboxButton.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        checkbox.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        checkbox.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        checkboxButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+        checkboxButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         
-        titleLabel.leadingAnchor.constraint(equalTo: checkbox.trailingAnchor, constant: 5).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: checkbox.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: checkboxButton.trailingAnchor, constant: 5).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: checkboxButton.topAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
     }
     
-    func setCheckBox() {
-        checkbox.setImage(UIImage(systemName: "circle")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+    /* Checkbox Button */
+    func setCheckboxButton() {
+        checkboxButton.setImage(UIImage(systemName: "circle")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     
     func setTitleLabel() {
