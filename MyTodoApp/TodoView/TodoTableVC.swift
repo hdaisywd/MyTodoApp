@@ -18,7 +18,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     let blankPageLabel = UILabel()
     
     /* sections */
-    let sections = ["Starred", "To do", "Done"]
+    var sections = ["Starred", "To do", "Done"]
     
     /* table view 초기 설정 */
     func setTableView() {
@@ -99,7 +99,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let headerLabel = UILabel()
-
+        
         headerView.addSubview(headerLabel)
         
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -184,7 +184,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
         starredAction.image = UIImage(systemName: "star.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
         starredAction.backgroundColor = .systemBlue
-
+        
         return UISwipeActionsConfiguration(actions: [deleteAction, starredAction])
     }
     

@@ -56,6 +56,7 @@ class AddTaskVC: UIViewController {
         titleLabel.text = "Title"
         titleLabel.font = .systemFont(ofSize: 20)
         titleLabel.textColor = .white
+        
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -64,16 +65,20 @@ class AddTaskVC: UIViewController {
         ])
         
         titleTextField.placeholder = "Please enter a title."
+        titleTextField.textColor = .gray
+        
         view.addSubview(titleTextField)
         titleTextField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleTextField.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            titleTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             titleTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5)
         ])
         
         contentLabel.text = "Content"
         contentLabel.font = .systemFont(ofSize: 20)
         contentLabel.textColor = .white
+        
         view.addSubview(contentLabel)
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -83,9 +88,12 @@ class AddTaskVC: UIViewController {
         
         contentTextField.placeholder = "Please enter a content."
         view.addSubview(contentTextField)
+        contentTextField.textColor = .gray
+        
         contentTextField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentTextField.leadingAnchor.constraint(equalTo: contentLabel.leadingAnchor),
+            contentTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             contentTextField.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 10)
         ])
         
