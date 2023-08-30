@@ -109,7 +109,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.myTableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            myTableView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 5),
+            myTableView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 20),
             myTableView.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor),
             myTableView.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
             myTableView.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor)
@@ -148,9 +148,29 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return sections[section]
     }
     
+    /* Table View Section Title Color change */
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let headerLabel = UILabel()
+
+        headerView.addSubview(headerLabel)
         
-        return
+        headerLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            headerLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor),
+            headerLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
+        ])
+
+        headerLabel.text = sections[section]
+        headerLabel.textColor = .white
+
+        return headerView
+    }
+    
+    /* Header 사이즈 */
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
