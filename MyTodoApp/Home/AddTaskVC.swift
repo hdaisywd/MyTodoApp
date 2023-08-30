@@ -27,7 +27,7 @@ class AddTaskVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .darkGray
         
         setAddTaskTitle()
         setTaskField()

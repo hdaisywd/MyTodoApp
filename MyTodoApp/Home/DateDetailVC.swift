@@ -25,7 +25,7 @@ class DateDetailVC: TodoTableVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        view.backgroundColor = .darkGray
 
         vcLabelStr = "🐯 \(String(describing: monthInEnglish[month!-1] )) \(String(describing: day!))"
         blankPageLabelStr = "No todo yet!"

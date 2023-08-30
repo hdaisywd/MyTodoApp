@@ -28,7 +28,7 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         calendarView.layer.cornerRadius = 10.0
         
         /* 캘린더 색 정하기 */
-        calendarView.backgroundColor = .secondarySystemBackground
+        calendarView.backgroundColor = .systemGroupedBackground
         calendarView.tintColor = .systemTeal
         
         /* 시작 일 정하기 */
@@ -73,8 +73,7 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         
         return nil
     }
-    
-    
+
     /* 달력에서 날짜 선택 처리 */
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         selection.setSelected(dateComponents, animated: true)

@@ -99,13 +99,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		AB769B5C2A9F16F700F62B1B /* TodoView */ = {
+		AB769B5C2A9F16F700F62B1B /* TodoTabbleView */ = {
 			isa = PBXGroup;
 			children = (
 				AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */,
 				ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */,
 			);
-			path = TodoView;
+			path = TodoTabbleView;
 			sourceTree = "<group>";
 		};
 		ABB7DA742A9725DA00F4DA49 /* Todo */ = {
@@ -138,7 +138,7 @@
 				ABE1F9902A961B4A00371F49 /* AppDelegate.swift */,
 				ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */,
 				ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */,
-				AB769B5C2A9F16F700F62B1B /* TodoView */,
+				AB769B5C2A9F16F700F62B1B /* TodoTabbleView */,
 				ABE1F9B72A96204300371F49 /* Home */,
 				ABB7DA742A9725DA00F4DA49 /* Todo */,
 				AB5B71C62A9B2B6300B22E29 /* StarredList */,
