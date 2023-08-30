@@ -26,9 +26,9 @@ class DateDetailVC: TodoTableVC {
         super.viewDidLoad()
         
         view.backgroundColor = .black
-        
-        /* 날짜 넣어주기 */
+
         vcLabelStr = "🐯 \(String(describing: monthInEnglish[month!-1] )) \(String(describing: day!))"
+        blankPageLabelStr = "No todo yet!"
         
         setVcLabel()
         setTableView()

@@ -15,6 +15,7 @@ class TodoVC: TodoTableVC {
         navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         vcLabelStr = "🐯 Do It Today!"
+        blankPageLabelStr = "Nothing to do today!"
         
         setVcLabel()
         getDate()

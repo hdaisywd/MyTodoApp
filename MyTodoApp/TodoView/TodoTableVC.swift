@@ -15,7 +15,9 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     var starreditems = [Task]()
     var doneItems = [Task]()
     
+    /* Blank Page */
     let blankPageLabel = UILabel()
+    var blankPageLabelStr = "No Label :("
     
     /* sections */
     var sections = ["Starred", "To do", "Done"]
@@ -138,7 +140,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     /* Table View 내용 없을때 화면 구현 */
     func loadBlankPage() {
-        blankPageLabel.text = "Nothing to do today!"
+        blankPageLabel.text = blankPageLabelStr
         blankPageLabel.font = .systemFont(ofSize: 20)
         blankPageLabel.textColor = .gray
         
