@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 extension SettingsVC {
-
+    
     func setUserProfile() {
         setUserProfileView() 
         setUserProfileStackView()
@@ -12,7 +12,7 @@ extension SettingsVC {
     /* 테두리 설정 */
     func setUserProfileView() {
         view.addSubview(userProfileView)
-
+        
         userProfileView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -26,7 +26,7 @@ extension SettingsVC {
     /* User Profile StackView 설정하기 */
     func setUserProfileStackView() {
         userProfileView.addSubview(userProfileStackView)
-
+        
         userProfileStackView.translatesAutoresizingMaskIntoConstraints = false
         userProfileStackView.axis = .horizontal
         userProfileStackView.distribution = .fill
@@ -85,7 +85,7 @@ extension SettingsVC {
     func setProfilePicture() -> UIImage {
         guard let profilePicture = UserDefaults.standard.data(forKey: "profilePicture") else {
             print("이미지가 없습니다")
-            return UIImage(systemName: "person.crop.circle")!
+            return UIImage(systemName: "person.crop.circle")!.withTintColor(UIColor.systemTeal, renderingMode: .alwaysOriginal)
         }
         return UIImage(data: profilePicture)!
     }

@@ -33,7 +33,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     /* Delegate, Data Source 상속 */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("items.count: ", items.count)
         return items.count
     }
 

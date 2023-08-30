@@ -28,7 +28,7 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         calendarView.layer.cornerRadius = 10.0
         
         /* 캘린더 색 정하기 */
-        calendarView.backgroundColor = .systemGroupedBackground
+        calendarView.backgroundColor = .systemBackground
         calendarView.tintColor = .systemTeal
         
         /* 시작 일 정하기 */
@@ -81,6 +81,8 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
         
         /* Date Detail 페이지 불러오기 */
         let dateDetailVC = DateDetailVC(selectedDate)
+        dateDetailVC.modalPresentationStyle = .pageSheet
+        
         self.present(dateDetailVC, animated: true)
         
         reloadCalendarView(date: Calendar.current.date(from: dateComponents!))
