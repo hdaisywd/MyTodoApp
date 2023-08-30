@@ -1,8 +1,9 @@
 
 import Foundation
 import UIKit
+import FSCalendar
 
-extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
+extension HomeVC: FSCalendarDelegate, FSCalendarDataSource {
     
     /* 오늘의 날짜를 불러온다 */
     /* 예외 처리 해주는거 질문하기 */
@@ -19,20 +20,19 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
     /* 캘린더를 불러온다 */
     func setCalendar(year: Int, month: Int, date: Int) {
         calendarView.delegate = self
-        calendarView.calendar = Calendar(identifier: .gregorian)
+        calendarView.dataSource = self
         calendarView.locale = Locale(identifier: "kr_KR")
-        calendarView.fontDesign = .rounded
         
         /* CalendarView Rounded Edges */
         calendarView.layer.cornerCurve = .continuous
         calendarView.layer.cornerRadius = 10.0
         
         /* 캘린더 색 정하기 */
-        calendarView.backgroundColor = .systemBackground
-        calendarView.tintColor = .systemTeal
+        calendarView.appearance.headerTitleColor = UIColor.systemTeal
+        calendarView.appearance.weekdayTextColor = UIColor.systemTeal
+        calendarView.appearance.selectionColor = UIColor.systemTeal
+        calendarView.appearance.titleDefaultColor = UIColor.systemTeal
         
-        /* 시작 일 정하기 */
-        calendarView.visibleDateComponents = DateComponents(calendar: Calendar(identifier: .gregorian), year: year, month: month, day: date)
         
         /* view에 추가하기 */
         view.addSubview(calendarView)
@@ -45,8 +45,8 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
             calendarView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10)
         ])
         
-        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
-        calendarView.selectionBehavior = dateSelection
+//        let dateSelection = UICalendarSelectionSingleDate(delegate: self)
+//        calendarView.selectionBehavior = dateSelection
     }
     
     /* 선택된 날짜들에 라벨 붙이기 */
@@ -95,6 +95,6 @@ extension HomeVC: UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate 
     func reloadCalendarView(date: Date?) {
         if date == nil { return }
         let calendar = Calendar.current
-        calendarView.reloadDecorations(forDateComponents: [calendar.dateComponents([.day, .month, .year], from: date!)], animated: true)
+//        calendarView.reloadDecorations(forDateComponents: [calendar.dateComponents([.day, .month, .year], from: date!)], animated: true)
     }
 }

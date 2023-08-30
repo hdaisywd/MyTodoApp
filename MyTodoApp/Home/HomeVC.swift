@@ -1,10 +1,11 @@
 
 import Foundation
 import UIKit
+import FSCalendar
 
 class HomeVC: UIViewController {
     /* 달력 */
-    let calendarView = UICalendarView()
+    let calendarView = FSCalendar() 
     var selectedDate: DateComponents? = nil
     var hasSchedule = true
 

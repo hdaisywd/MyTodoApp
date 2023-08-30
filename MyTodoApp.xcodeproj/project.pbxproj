@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10BB5F88DB436AF36AC15664 /* Pods_MyTodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D12639D1B09BF334AF27AF /* Pods_MyTodoApp.framework */; };
 		AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */; };
 		AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */; };
 		AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71502A9B364800C8A3A8 /* FirebaseAuth */; };
@@ -22,6 +21,7 @@
 		AB769B642A9F2A4A00F62B1B /* StarredListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB769B632A9F2A4A00F62B1B /* StarredListVC.swift */; };
 		AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9749852A999DC600042286 /* CustomSettingsCell.swift */; };
 		AB9749882A999FA700042286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9749872A999FA700042286 /* GoogleService-Info.plist */; };
+		ABC4F6282A9FB628004339D0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = ABC4F6272A9FB628004339D0 /* FSCalendar */; };
 		ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B402A98E8B8005F0F91 /* User.swift */; };
 		ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */; };
 		ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */; };
@@ -40,8 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4297B32F51A77863D1E2F8A5 /* Pods-MyTodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodoApp.release.xcconfig"; path = "Target Support Files/Pods-MyTodoApp/Pods-MyTodoApp.release.xcconfig"; sourceTree = "<group>"; };
-		64D12639D1B09BF334AF27AF /* Pods_MyTodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableVC.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 		ABE1F9BD2A96445000371F49 /* Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrains.swift; sourceTree = "<group>"; };
 		ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailViewCell.swift; sourceTree = "<group>"; };
 		ABE1F9C52A96563700371F49 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		E5FE52DE476A1700C8DFAE0F /* Pods-MyTodoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodoApp.debug.xcconfig"; path = "Target Support Files/Pods-MyTodoApp/Pods-MyTodoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,24 +77,14 @@
 				AB5F71532A9B364800C8A3A8 /* FirebaseAuthCombine-Community in Frameworks */,
 				AB5F71552A9B364800C8A3A8 /* FirebaseDatabase in Frameworks */,
 				AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */,
+				ABC4F6282A9FB628004339D0 /* FSCalendar in Frameworks */,
 				AB5F71592A9B364800C8A3A8 /* FirebaseStorage in Frameworks */,
-				10BB5F88DB436AF36AC15664 /* Pods_MyTodoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E5DA602C232C9246D7DAAE3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E5FE52DE476A1700C8DFAE0F /* Pods-MyTodoApp.debug.xcconfig */,
-				4297B32F51A77863D1E2F8A5 /* Pods-MyTodoApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		AB5B71C62A9B2B6300B22E29 /* StarredList */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +123,6 @@
 			children = (
 				ABE1F98F2A961B4A00371F49 /* MyTodoApp */,
 				ABE1F98E2A961B4A00371F49 /* Products */,
-				6E5DA602C232C9246D7DAAE3 /* Pods */,
-				E60E2A8FF32615D6EA602616 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,14 +188,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E60E2A8FF32615D6EA602616 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				64D12639D1B09BF334AF27AF /* Pods_MyTodoApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,11 +195,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABE1F9A42A961B4C00371F49 /* Build configuration list for PBXNativeTarget "MyTodoApp" */;
 			buildPhases = (
-				A0C34E6D4AED68DCBACE1D73 /* [CP] Check Pods Manifest.lock */,
 				ABE1F9892A961B4A00371F49 /* Sources */,
 				ABE1F98A2A961B4A00371F49 /* Frameworks */,
 				ABE1F98B2A961B4A00371F49 /* Resources */,
-				9B141428555AAB5BE9C19E1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +211,7 @@
 				AB5F71542A9B364800C8A3A8 /* FirebaseDatabase */,
 				AB5F71562A9B364800C8A3A8 /* FirebaseDatabaseSwift */,
 				AB5F71582A9B364800C8A3A8 /* FirebaseStorage */,
+				ABC4F6272A9FB628004339D0 /* FSCalendar */,
 			);
 			productName = MyTodoApp;
 			productReference = ABE1F98D2A961B4A00371F49 /* MyTodoApp.app */;
@@ -267,6 +243,7 @@
 			mainGroup = ABE1F9842A961B4A00371F49;
 			packageReferences = (
 				AB5F714D2A9B364800C8A3A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ABC4F6262A9FB628004339D0 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = ABE1F98E2A961B4A00371F49 /* Products */;
 			projectDirPath = "";
@@ -289,48 +266,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9B141428555AAB5BE9C19E1E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyTodoApp/Pods-MyTodoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyTodoApp/Pods-MyTodoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTodoApp/Pods-MyTodoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0C34E6D4AED68DCBACE1D73 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyTodoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABE1F9892A961B4A00371F49 /* Sources */ = {
@@ -490,7 +425,6 @@
 		};
 		ABE1F9A52A961B4C00371F49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5FE52DE476A1700C8DFAE0F /* Pods-MyTodoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,7 +452,6 @@
 		};
 		ABE1F9A62A961B4C00371F49 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4297B32F51A77863D1E2F8A5 /* Pods-MyTodoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,6 +509,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		ABC4F6262A9FB628004339D0 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -608,6 +549,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB5F714D2A9B364800C8A3A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		ABC4F6272A9FB628004339D0 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABC4F6262A9FB628004339D0 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
