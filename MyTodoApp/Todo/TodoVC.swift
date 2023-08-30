@@ -17,6 +17,8 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var starreditems = [Task]()
     var doneItems = [Task]()
     
+    let blankPageLabel = UILabel()
+    
     /* sections */
     let sections = ["Starred", "To do", "Done"]
     
@@ -34,6 +36,8 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        view.backgroundColor = .black
         
         loadDateData{
             self.myTableView.reloadData()
@@ -79,6 +83,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func setDateLabel() {
         dateLabel.text = "🐯 Do It Today!"
         dateLabel.font = UIFont.boldSystemFont(ofSize: 30)
+//        dateLabel.textColor = .white
         
         view.addSubview(dateLabel)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -137,9 +142,35 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if starreditems.count + todoItems.count + doneItems.count == 0 {
+            loadBlankPage()
+            myTableView.isHidden = true
+            blankPageLabel.isHidden = false
+            return 0
+        }
+        
+        myTableView.isHidden = false
+        blankPageLabel.isHidden = true
+        
         if (section == 0) { return starreditems.count }
         if (section == 1) { return todoItems.count }
         return doneItems.count
+    }
+    
+    /* Table View 내용 없을때 화면 구현 */
+    func loadBlankPage() {
+        blankPageLabel.text = "Nothing to do today!"
+        blankPageLabel.font = .systemFont(ofSize: 20)
+        blankPageLabel.textColor = .gray
+        
+        view.addSubview(blankPageLabel)
+        blankPageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            blankPageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            blankPageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
     }
     
     /* Swipe Actions */
@@ -179,6 +210,10 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     /* Swipe 후 reload 되게 수정 */
     func reloadTableView() {
+        todoItems = [Task]()
+        starreditems = [Task]()
+        doneItems = [Task]()
+        
         loadDateData{
             self.myTableView.reloadData()
         }
