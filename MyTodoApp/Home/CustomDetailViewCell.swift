@@ -27,6 +27,8 @@ class CustomDetailViewCell: UITableViewCell {
         setCheckBox()
         setTitleLabel()
         cellLayout()
+
+        self.contentView.backgroundColor = .systemTeal
     }
     
     required init?(coder: NSCoder) {

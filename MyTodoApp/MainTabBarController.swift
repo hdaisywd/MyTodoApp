@@ -7,7 +7,7 @@ let taskManager = TaskManager()
 class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
 
         // tab bar 아이콘 설정 1
         let firstVC = UINavigationController(rootViewController: HomeVC())

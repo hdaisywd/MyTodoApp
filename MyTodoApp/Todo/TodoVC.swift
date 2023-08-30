@@ -5,7 +5,7 @@ import UIKit
 class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let dateLabel = UILabel()
-    let myTableView = UITableView()
+    var myTableView = UITableView()
     
     /* get date */
     var year = 0
@@ -26,8 +26,9 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         self.navigationItem.title = "Today Todo"
+        navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         setDateLabel()
         getDate()
@@ -36,8 +37,6 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        view.backgroundColor = .black
         
         loadDateData{
             self.myTableView.reloadData()
@@ -83,7 +82,7 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func setDateLabel() {
         dateLabel.text = "🐯 Do It Today!"
         dateLabel.font = UIFont.boldSystemFont(ofSize: 30)
-//        dateLabel.textColor = .white
+        dateLabel.textColor = .white
         
         view.addSubview(dateLabel)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -97,8 +96,13 @@ class TodoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     /* table view 초기 설정 */
     func setTableView() {
+        /* 똥글똥글 설정 */
+        myTableView = UITableView(frame: view.bounds, style: .insetGrouped)
+        
         self.myTableView.dataSource = self
         self.myTableView.delegate = self
+        
+        self.myTableView.backgroundColor = .black
 
         self.myTableView.register(CustomDetailViewCell.self, forCellReuseIdentifier: "TableViewCell")
         self.view.addSubview(self.myTableView)
