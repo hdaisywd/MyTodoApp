@@ -199,7 +199,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         else if indexPath.section == 1 { item = todoItems[indexPath.row] }
         else { item = doneItems[indexPath.row] }
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
+        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { action, view, success in
             taskManager.deleteTask(taskID: item.taskId)
             self.reloadTableView()
             success(true)

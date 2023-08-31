@@ -27,6 +27,9 @@ class SettingsVC: UIViewController {
     var cellHeight = 50
     lazy var items = [ nickNameChangeStr, darkLightModeChangeStr, appLockStr ] // 최초 접근시 할당하도록
     
+    /* Api Picture */
+    let apiPicture = UIImageView() 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -34,10 +37,12 @@ class SettingsVC: UIViewController {
         /* NavigationBar Title */
         self.navigationItem.title = "Settings"
         navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-
-        /* User Profile */
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setUserProfile()
         setItemsTableView()
+        setApiPicture()
     }
 
 }

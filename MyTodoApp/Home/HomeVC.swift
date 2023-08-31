@@ -15,7 +15,6 @@ class HomeVC: UIViewController {
 
         /* Title View */
         setHomeTitle()
-
         setCalendar()
     }
     
