@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonActionDelegate {
 
     var myTableView = UITableView()
     
@@ -69,6 +69,8 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     /* tableView */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
+        
+        cell.cellDelegate = self
         
         if (indexPath.section == 0 ) {
             cell.titleStr = starreditems[indexPath.row].title
@@ -152,6 +154,11 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             blankPageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
+    }
+    
+    /* 프로토콜 */
+    func checkmarkButtonTapped() {
+        print("checkmark button tapped")
     }
     
     /* Swipe Actions */

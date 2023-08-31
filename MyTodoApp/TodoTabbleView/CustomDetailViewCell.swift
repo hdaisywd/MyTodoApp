@@ -3,10 +3,12 @@ import Foundation
 import UIKit
 
 class CustomDetailViewCell: UITableViewCell {
-    
-    /* content도 화면에 표시할 방법 찾아보기 */
-    let checkboxButton = UIButton()
+
     let titleLabel = UILabel()
+    
+    /* Checkmark Box */
+    let checkboxButton = UIButton()
+    var cellDelegate: ButtonActionDelegate?
     
     /* init은 셀이 초기화 될때만 호출됨. 재사용될때마다 내용이 바뀌어야한다. */
     var titleStr = "Title" {
@@ -24,6 +26,7 @@ class CustomDetailViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         print("customcell init")
+        self.checkboxButton.addTarget(self, action: #selector(checkboxButtonAction), for: .touchUpInside)
         setCheckboxButton()
         setTitleLabel()
         cellLayout()
@@ -34,18 +37,24 @@ class CustomDetailViewCell: UITableViewCell {
     }
     
     func cellLayout() {
-        self.addSubview(checkboxButton)
-        self.addSubview(titleLabel)
+        contentView.addSubview(checkboxButton)
+        contentView.addSubview(titleLabel)
 
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         checkboxButton.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        checkboxButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        checkboxButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        checkboxButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+        checkboxButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         
         titleLabel.leadingAnchor.constraint(equalTo: checkboxButton.trailingAnchor, constant: 5).isActive = true
         titleLabel.topAnchor.constraint(equalTo: checkboxButton.topAnchor).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
     }
     
     /* Checkbox Button */
@@ -62,5 +71,13 @@ class CustomDetailViewCell: UITableViewCell {
         
         titleLabel.attributedText = attributedText
     }
+    
+    @objc func checkboxButtonAction() {
+        cellDelegate?.checkmarkButtonTapped()
+    }
 
+}
+
+protocol ButtonActionDelegate: AnyObject {
+    func checkmarkButtonTapped()
 }

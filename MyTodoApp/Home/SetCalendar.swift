@@ -14,26 +14,28 @@ extension HomeVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAp
         calendarView.layer.cornerCurve = .continuous
         calendarView.layer.cornerRadius = 10.0
         
-        /* 캘린더 색 정하기 */
-        calendarView.appearance.headerTitleColor = UIColor.systemTeal
-        calendarView.appearance.weekdayTextColor = UIColor.systemTeal
-        calendarView.appearance.selectionColor = UIColor.systemBlue
-        calendarView.appearance.todayColor = UIColor.systemTeal
-        
         /* 월요일부터 시작 */
         calendarView.firstWeekday = 2
         
         /* Header */
         calendarView.appearance.headerDateFormat = "YYYY / MM"
+        calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
+        
+        /* 캘린더 색 정하기 */
+        calendarView.appearance.headerTitleColor = UIColor.systemTeal
+        calendarView.appearance.weekdayTextColor = UIColor.systemTeal
+        calendarView.appearance.selectionColor = UIColor.systemBlue
+        calendarView.appearance.todayColor = UIColor.systemTeal
+        calendarView.calendarWeekdayView.weekdayLabels.last!.textColor = UIColor.magenta
         
         /* Weekday language change */
-        calendarView.calendarWeekdayView.weekdayLabels[0].text = "Sun"
-        calendarView.calendarWeekdayView.weekdayLabels[1].text = "Mon"
-        calendarView.calendarWeekdayView.weekdayLabels[2].text = "Tue"
-        calendarView.calendarWeekdayView.weekdayLabels[3].text = "Wed"
-        calendarView.calendarWeekdayView.weekdayLabels[4].text = "Thu"
-        calendarView.calendarWeekdayView.weekdayLabels[5].text = "Fri"
-        calendarView.calendarWeekdayView.weekdayLabels[6].text = "Sat"
+        calendarView.calendarWeekdayView.weekdayLabels[0].text = "Mon"
+        calendarView.calendarWeekdayView.weekdayLabels[1].text = "Tue"
+        calendarView.calendarWeekdayView.weekdayLabels[2].text = "Wed"
+        calendarView.calendarWeekdayView.weekdayLabels[3].text = "Thu"
+        calendarView.calendarWeekdayView.weekdayLabels[4].text = "Fri"
+        calendarView.calendarWeekdayView.weekdayLabels[5].text = "Sat"
+        calendarView.calendarWeekdayView.weekdayLabels[6].text = "Sun"
 
         
         /* visible month */
