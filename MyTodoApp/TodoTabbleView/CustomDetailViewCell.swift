@@ -8,7 +8,6 @@ class CustomDetailViewCell: UITableViewCell {
     
     /* Checkmark Box */
     let checkboxButton = UIButton()
-    var cellDelegate: ButtonActionDelegate?
     
     /* init은 셀이 초기화 될때만 호출됨. 재사용될때마다 내용이 바뀌어야한다. */
     var titleStr = "Title" {
@@ -26,7 +25,7 @@ class CustomDetailViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         print("customcell init")
-        self.checkboxButton.addTarget(self, action: #selector(checkboxButtonAction), for: .touchUpInside)
+//        self.checkboxButton.addTarget(self, action: #selector(checkboxButtonAction), for: .touchUpInside)
         setCheckboxButton()
         setTitleLabel()
         cellLayout()
@@ -40,7 +39,8 @@ class CustomDetailViewCell: UITableViewCell {
         contentView.addSubview(checkboxButton)
         contentView.addSubview(titleLabel)
 
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        /* contentview는 이렇게 해주면 안된다 */
+//        contentView.translatesAutoresizingMaskIntoConstraints = false
         checkboxButton.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -71,13 +71,5 @@ class CustomDetailViewCell: UITableViewCell {
         
         titleLabel.attributedText = attributedText
     }
-    
-    @objc func checkboxButtonAction() {
-        cellDelegate?.checkmarkButtonTapped()
-    }
 
-}
-
-protocol ButtonActionDelegate: AnyObject {
-    func checkmarkButtonTapped()
 }

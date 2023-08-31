@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonActionDelegate {
+class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var myTableView = UITableView()
     
@@ -21,6 +21,9 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     /* sections */
     var sections = ["Starred", "To do", "Done"]
+    
+    /* checkbox Action */
+    private var cellInfo: Task?
     
     /* table view 초기 설정 */
     func setTableView() {
@@ -70,21 +73,32 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
         
-        cell.cellDelegate = self
-        
         if (indexPath.section == 0 ) {
             cell.titleStr = starreditems[indexPath.row].title
             cell.contentStr = starreditems[indexPath.row].content
+            cellInfo = starreditems[indexPath.row]
         } else if (indexPath.section == 1) {
             cell.titleStr = todoItems[indexPath.row].title
             cell.contentStr = todoItems[indexPath.row].content
+            cellInfo = todoItems[indexPath.row]
         } else {
             cell.titleStr = doneItems[indexPath.row].title
             cell.contentStr = doneItems[indexPath.row].title
+            cellInfo = doneItems[indexPath.row]
         }
         
+        if cellInfo!.checkbox == true {
+            cell.checkboxButton.setImage(UIImage(systemName: "checkmark.circle")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal), for: .normal)
+            cell.backgroundColor = .systemGray
+        } else {
+            cell.checkboxButton.setImage(UIImage(systemName: "circle")?.withTintColor(UIColor.systemTeal, renderingMode: .alwaysOriginal), for: .normal)
+            cell.backgroundColor = .systemMint
+        }
+        
+        cell.checkboxButton.addTarget(self, action: #selector(checkmarkButtonTapped), for: .touchUpInside)
+        
         /* 여기서 하면 되는데 커스텀셀 클래스에서 하면 안댐 */
-        cell.backgroundColor = .systemMint
+        // cell.backgroundColor = .systemMint
         cell.selectionStyle = .none
         
         return cell
@@ -156,9 +170,24 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
     }
     
-    /* 프로토콜 */
-    func checkmarkButtonTapped() {
-        print("checkmark button tapped")
+    /* Checkmark Button Behavior */
+    @objc func checkmarkButtonTapped() {
+        guard cellInfo != nil else {
+            print("cellInfo loading 실패")
+            return
+        }
+        
+        let updatedTask = Task(taskId: cellInfo!.taskId,
+                               title: cellInfo!.title,
+                               content: cellInfo!.content,
+                               checkbox: !cellInfo!.checkbox,
+                               starred: cellInfo!.starred,
+                               dueDateYear: cellInfo!.dueDateYear,
+                               dueDateMonth: cellInfo!.dueDateMonth,
+                               dueDateDay: cellInfo!.dueDateDay)
+
+        taskManager.updateTask(taskID: cellInfo!.taskId, updatedTask: updatedTask)
+        self.reloadTableView()
     }
     
     /* Swipe Actions */
