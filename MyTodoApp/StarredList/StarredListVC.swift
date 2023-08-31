@@ -12,7 +12,7 @@ class StarredListVC: TodoTableVC {
         self.navigationItem.title = "Starred"
         navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
-        vcLabelStr = "🐯 It's all about priorities!"
+        vcLabelStr = "🐯 Priorities!"
         blankPageLabelStr = "No starred todo!"
         
         setVcLabel()

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1222D42AA0EC2500B15B40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222D32AA0EC2500B15B40 /* Alamofire */; };
+		AB1222D72AA0ED5500B15B40 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D62AA0ED5500B15B40 /* ApiModel.swift */; };
+		AB1222D92AA0ED5D00B15B40 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D82AA0ED5D00B15B40 /* ApiManager.swift */; };
+		AB1222DC2AA0F07F00B15B40 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222DB2AA0F07F00B15B40 /* RxBlocking */; };
+		AB1222DE2AA0F07F00B15B40 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222DD2AA0F07F00B15B40 /* RxBlocking-Dynamic */; };
+		AB1222E02AA0F07F00B15B40 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222DF2AA0F07F00B15B40 /* RxCocoa */; };
+		AB1222E22AA0F07F00B15B40 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222E12AA0F07F00B15B40 /* RxCocoa-Dynamic */; };
+		AB1222E42AA0F07F00B15B40 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222E32AA0F07F00B15B40 /* RxRelay */; };
+		AB1222E62AA0F07F00B15B40 /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222E52AA0F07F00B15B40 /* RxRelay-Dynamic */; };
+		AB1222E82AA0F07F00B15B40 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222E72AA0F07F00B15B40 /* RxSwift */; };
+		AB1222EA2AA0F07F00B15B40 /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222E92AA0F07F00B15B40 /* RxSwift-Dynamic */; };
+		AB1222EC2AA0F07F00B15B40 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222EB2AA0F07F00B15B40 /* RxTest */; };
+		AB1222EE2AA0F07F00B15B40 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222ED2AA0F07F00B15B40 /* RxTest-Dynamic */; };
 		AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */; };
 		AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */; };
 		AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71502A9B364800C8A3A8 /* FirebaseAuth */; };
@@ -40,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1222D62AA0ED5500B15B40 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		AB1222D82AA0ED5D00B15B40 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableVC.swift; sourceTree = "<group>"; };
@@ -73,18 +88,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB5F71572A9B364800C8A3A8 /* FirebaseDatabaseSwift in Frameworks */,
+				AB1222DC2AA0F07F00B15B40 /* RxBlocking in Frameworks */,
+				AB1222E02AA0F07F00B15B40 /* RxCocoa in Frameworks */,
+				AB1222D42AA0EC2500B15B40 /* Alamofire in Frameworks */,
+				AB1222E22AA0F07F00B15B40 /* RxCocoa-Dynamic in Frameworks */,
 				AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */,
 				AB5F71532A9B364800C8A3A8 /* FirebaseAuthCombine-Community in Frameworks */,
 				AB5F71552A9B364800C8A3A8 /* FirebaseDatabase in Frameworks */,
+				AB1222EA2AA0F07F00B15B40 /* RxSwift-Dynamic in Frameworks */,
 				AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */,
+				AB1222E42AA0F07F00B15B40 /* RxRelay in Frameworks */,
+				AB1222EC2AA0F07F00B15B40 /* RxTest in Frameworks */,
+				AB1222EE2AA0F07F00B15B40 /* RxTest-Dynamic in Frameworks */,
 				ABC4F6282A9FB628004339D0 /* FSCalendar in Frameworks */,
 				AB5F71592A9B364800C8A3A8 /* FirebaseStorage in Frameworks */,
+				AB1222E82AA0F07F00B15B40 /* RxSwift in Frameworks */,
+				AB1222E62AA0F07F00B15B40 /* RxRelay-Dynamic in Frameworks */,
+				AB1222DE2AA0F07F00B15B40 /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1222D52AA0ED3300B15B40 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB1222D62AA0ED5500B15B40 /* ApiModel.swift */,
+				AB1222D82AA0ED5D00B15B40 /* ApiManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		AB5B71C62A9B2B6300B22E29 /* StarredList */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +182,7 @@
 				ABE1F9B82A96206700371F49 /* Settings */,
 				ABE1F9C12A96556C00371F49 /* Models */,
 				AB5B71C92A9B2C4E00B22E29 /* Manager */,
+				AB1222D52AA0ED3300B15B40 /* API */,
 				ABE1F9B52A961FA700371F49 /* Extension.swift */,
 				ABE1F9BD2A96445000371F49 /* Constrains.swift */,
 				ABE1F99C2A961B4C00371F49 /* Assets.xcassets */,
@@ -212,6 +248,17 @@
 				AB5F71562A9B364800C8A3A8 /* FirebaseDatabaseSwift */,
 				AB5F71582A9B364800C8A3A8 /* FirebaseStorage */,
 				ABC4F6272A9FB628004339D0 /* FSCalendar */,
+				AB1222D32AA0EC2500B15B40 /* Alamofire */,
+				AB1222DB2AA0F07F00B15B40 /* RxBlocking */,
+				AB1222DD2AA0F07F00B15B40 /* RxBlocking-Dynamic */,
+				AB1222DF2AA0F07F00B15B40 /* RxCocoa */,
+				AB1222E12AA0F07F00B15B40 /* RxCocoa-Dynamic */,
+				AB1222E32AA0F07F00B15B40 /* RxRelay */,
+				AB1222E52AA0F07F00B15B40 /* RxRelay-Dynamic */,
+				AB1222E72AA0F07F00B15B40 /* RxSwift */,
+				AB1222E92AA0F07F00B15B40 /* RxSwift-Dynamic */,
+				AB1222EB2AA0F07F00B15B40 /* RxTest */,
+				AB1222ED2AA0F07F00B15B40 /* RxTest-Dynamic */,
 			);
 			productName = MyTodoApp;
 			productReference = ABE1F98D2A961B4A00371F49 /* MyTodoApp.app */;
@@ -244,6 +291,8 @@
 			packageReferences = (
 				AB5F714D2A9B364800C8A3A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				ABC4F6262A9FB628004339D0 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				AB1222D22AA0EC2500B15B40 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = ABE1F98E2A961B4A00371F49 /* Products */;
 			projectDirPath = "";
@@ -272,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1222D72AA0ED5500B15B40 /* ApiModel.swift in Sources */,
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
@@ -290,6 +340,7 @@
 				ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */,
 				ABE1F9C02A96517100371F49 /* CustomDetailViewCell.swift in Sources */,
 				ABE1F9C62A96563700371F49 /* Task.swift in Sources */,
+				AB1222D92AA0ED5D00B15B40 /* ApiManager.swift in Sources */,
 				AB769B5E2A9F1AC600F62B1B /* TodoTableVC.swift in Sources */,
 				AB769B642A9F2A4A00F62B1B /* StarredListVC.swift in Sources */,
 			);
@@ -501,6 +552,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AB1222D22AA0EC2500B15B40 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		AB5F714D2A9B364800C8A3A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -520,6 +587,61 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AB1222D32AA0EC2500B15B40 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222D22AA0EC2500B15B40 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		AB1222DB2AA0F07F00B15B40 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		AB1222DD2AA0F07F00B15B40 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		AB1222DF2AA0F07F00B15B40 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		AB1222E12AA0F07F00B15B40 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		AB1222E32AA0F07F00B15B40 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		AB1222E52AA0F07F00B15B40 /* RxRelay-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxRelay-Dynamic";
+		};
+		AB1222E72AA0F07F00B15B40 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		AB1222E92AA0F07F00B15B40 /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
+		};
+		AB1222EB2AA0F07F00B15B40 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		AB1222ED2AA0F07F00B15B40 /* RxTest-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB1222DA2AA0F07F00B15B40 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxTest-Dynamic";
+		};
 		AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AB5F714D2A9B364800C8A3A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
