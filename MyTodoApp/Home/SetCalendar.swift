@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 import FSCalendar
 
-extension HomeVC: FSCalendarDelegate, FSCalendarDataSource {
+extension HomeVC: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
     
     /* 캘린더를 불러온다 */
     func setCalendar() {
@@ -18,8 +18,26 @@ extension HomeVC: FSCalendarDelegate, FSCalendarDataSource {
         calendarView.appearance.headerTitleColor = UIColor.systemTeal
         calendarView.appearance.weekdayTextColor = UIColor.systemTeal
         calendarView.appearance.selectionColor = UIColor.systemBlue
-        calendarView.appearance.titleDefaultColor = UIColor.systemTeal
         calendarView.appearance.todayColor = UIColor.systemTeal
+        
+        /* 월요일부터 시작 */
+        calendarView.firstWeekday = 2
+        
+        /* Header */
+        calendarView.appearance.headerDateFormat = "YYYY / MM"
+        
+        /* Weekday language change */
+        calendarView.calendarWeekdayView.weekdayLabels[0].text = "Sun"
+        calendarView.calendarWeekdayView.weekdayLabels[1].text = "Mon"
+        calendarView.calendarWeekdayView.weekdayLabels[2].text = "Tue"
+        calendarView.calendarWeekdayView.weekdayLabels[3].text = "Wed"
+        calendarView.calendarWeekdayView.weekdayLabels[4].text = "Thu"
+        calendarView.calendarWeekdayView.weekdayLabels[5].text = "Fri"
+        calendarView.calendarWeekdayView.weekdayLabels[6].text = "Sat"
+
+        
+        /* visible month */
+        calendarView.placeholderType = .none
         
         /* view에 추가하기 */
         view.addSubview(calendarView)
@@ -39,7 +57,6 @@ extension HomeVC: FSCalendarDelegate, FSCalendarDataSource {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.locale = Locale(identifier: "kr_KR")
         dateFormatter.timeZone = TimeZone(identifier: "Asia/Seoul")
         let formattedDate = dateFormatter.string(from: date)
         
@@ -54,29 +71,15 @@ extension HomeVC: FSCalendarDelegate, FSCalendarDataSource {
         present(DateDetailVC(year, month, day), animated: true)
     }
     
-    /* 선택된 날짜들에 라벨 붙이기 */
-    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        var dates = [[Int]]()
+    /* 일요일 magenta 색상 변경 */
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
+        let day = Calendar.current.component(.weekday, from: date) - 1
         
-        taskManager.readAllTasks { tasks in
-            for task in tasks {
-                dates.append([task.dueDateDay, task.dueDateMonth, task.dueDateYear])
-            }
+        if Calendar.current.shortWeekdaySymbols[day] == "일" {
+            return UIColor.magenta
+        } else {
+            return .systemTeal
         }
-        
-//        for date in dates {
-//            if let dueDate = createDateFromComponents(year: date[0], month: date[1], day: date[2]),
-//               Calendar.current.isDate(dueDate, equalTo: dateComponents.date!, toGranularity: .day) {
-//                return .customView {
-//                    let label = UILabel()
-//                    label.text = "🐯"
-//                    label.textAlignment = .center
-//                    return label
-//                }
-//            }
-//        }
-        
-        return nil
     }
 
 }
