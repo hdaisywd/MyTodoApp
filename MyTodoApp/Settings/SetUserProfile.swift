@@ -89,4 +89,5 @@ extension SettingsVC {
         }
         return UIImage(data: profilePicture)!
     }
+
 }

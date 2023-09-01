@@ -3,7 +3,6 @@ import Foundation
 import UIKit
 
 let taskManager = TaskManager()
-let userDefaults = UserDefaults.standard
 
 class MainTabBarController: UITabBarController {
     override func viewDidLoad() {

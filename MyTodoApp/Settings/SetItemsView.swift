@@ -63,8 +63,8 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         
         let doneAction = UIAlertAction(title: "Done", style: .default) { (action) in
             let nickname = changeNickName.textFields?[0].text
-            userDefaults.set(nickname, forKey: "nickName")
-            print("닉네임 체인지 성공", nickname)
+            UserDefaults.standard.set(nickname, forKey: "nickName")
+            self.viewWillAppear(true)
         }
         
         changeNickName.addTextField { (myTextField) in
@@ -76,5 +76,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             self.present(changeNickName, animated: true)
         }
+
     }
 }
