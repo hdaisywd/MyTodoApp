@@ -6,7 +6,8 @@ import FirebaseDatabase
 class TaskVC: UIViewController {
     
     /* Add Task Title */
-    let AddTaskTitle = UILabel()
+    let taskTitleLabel = UILabel()
+    var taskTitleStr = "Task"
     
     /* Task TextField */
     let titleLabel = UILabel()
@@ -30,36 +31,37 @@ class TaskVC: UIViewController {
     let taskManager = TaskManager()
     
     /* Add Task Title */
-    func setAddTaskTitle() {
-        AddTaskTitle.text = "New Task"
-        AddTaskTitle.font = UIFont.boldSystemFont(ofSize: 30)
-        AddTaskTitle.textColor = .white
+    func setTaskTitleLabel() {
+        taskTitleLabel.text = taskTitleStr
+        taskTitleLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        taskTitleLabel.textColor = .white
         
-        view.addSubview(AddTaskTitle)
-        AddTaskTitle.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(taskTitleLabel)
+        taskTitleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            AddTaskTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            AddTaskTitle.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            AddTaskTitle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            taskTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            taskTitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            taskTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
         ])
     }
     
     /* TaskField */
     func setTaskField() {
-        titleLabel.text = initialTitleText
+        titleLabel.text = "Title"
         titleLabel.font = .systemFont(ofSize: 20)
         titleLabel.textColor = .white
         
         view.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: AddTaskTitle.leadingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: AddTaskTitle.bottomAnchor, constant: 20)
+            titleLabel.leadingAnchor.constraint(equalTo: taskTitleLabel.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: taskTitleLabel.bottomAnchor, constant: 20)
         ])
         
         titleTextField.placeholder = "Please enter a title."
         titleTextField.textColor = .gray
+        titleTextField.text = initialTitleText
         
         view.addSubview(titleTextField)
         titleTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +71,7 @@ class TaskVC: UIViewController {
             titleTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5)
         ])
         
-        contentLabel.text = initialContentText
+        contentLabel.text = "Content"
         contentLabel.font = .systemFont(ofSize: 20)
         contentLabel.textColor = .white
         
@@ -83,6 +85,7 @@ class TaskVC: UIViewController {
         contentTextField.placeholder = "Please enter a content."
         view.addSubview(contentTextField)
         contentTextField.textColor = .gray
+        contentTextField.text = initialContentText
         
         contentTextField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

@@ -5,7 +5,9 @@ class NewTaskVC: TaskVC {
         super.viewDidLoad()
         view.backgroundColor = .black
         
-        setAddTaskTitle()
+        super.taskTitleStr = "New Task"
+        
+        setTaskTitleLabel()
         setTaskField()
         setDatePicker()
         setSaveButton()

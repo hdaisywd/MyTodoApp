@@ -100,8 +100,14 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     /* Table View Cell 선택시 action 구현 */
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let editTaskVC = EditTaskVC()
+        
         if indexPath.section == 0 {
-            starreditems[indexPath.row]
+            editTaskVC.loadData(starreditems[indexPath.row]) {
+                DispatchQueue.main.async {
+                    self.present(editTaskVC, animated: true)
+                }
+            }
         }
     }
     

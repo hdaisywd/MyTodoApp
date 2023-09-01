@@ -1,14 +1,15 @@
 
+import Foundation
+
 class EditTaskVC: TaskVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         
-        super.AddTaskTitle.text = "Edit Todo"
+        super.taskTitleStr = "Edit Task"
         
-        // loadData()
-        setAddTaskTitle()
+        setTaskTitleLabel()
         setTaskField()
         setDatePicker()
         setSaveButton()
