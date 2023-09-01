@@ -63,12 +63,6 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         ])
     }
     
-    /* Data 불러오기 */
-    func loadDateData(completion: @escaping () -> Void) {
-        print("Something went wrong!")
-        return 
-    }
-    
     /* tableView */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomDetailViewCell
@@ -205,6 +199,7 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             success(true)
         }
         deleteAction.image = UIImage(systemName: "xmark")
+        deleteAction.backgroundColor = .red
 
         let starredAction = UIContextualAction(style: .normal, title: "Favorite") { action, view, success in
             let updatedTask = Task(taskId: item.taskId,
@@ -235,6 +230,12 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         loadDateData{
             self.myTableView.reloadData()
         }
+    }
+    
+    /* Data 불러오기, override 해서 사용한다 */
+    func loadDateData(completion: @escaping () -> Void) {
+        print("Something went wrong!")
+        return
     }
 
 }

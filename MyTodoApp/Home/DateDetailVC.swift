@@ -59,7 +59,7 @@ class DateDetailVC: TodoTableVC {
 
             for task in tasks {
                 if task.dueDateYear == self.year && task.dueDateMonth == self.month && task.dueDateDay == self.day {
-                    if task.starred == true { self.starreditems.append(task) }
+                    if task.starred == true && task.checkbox != true { self.starreditems.append(task) }
                     else if task.checkbox == true { self.doneItems.append(task) }
                     else { self.todoItems.append(task) }
                 }
