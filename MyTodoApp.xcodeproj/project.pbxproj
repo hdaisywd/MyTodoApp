@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB1222D42AA0EC2500B15B40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222D32AA0EC2500B15B40 /* Alamofire */; };
-		AB1222D72AA0ED5500B15B40 /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D62AA0ED5500B15B40 /* DogAPI.swift */; };
-		AB1222D92AA0ED5D00B15B40 /* DogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D82AA0ED5D00B15B40 /* DogModel.swift */; };
+		AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */; };
 		AB5A1F032AA0FFA500E38176 /* SetApiPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */; };
 		AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */; };
 		AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */; };
@@ -44,8 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB1222D62AA0ED5500B15B40 /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
-		AB1222D82AA0ED5D00B15B40 /* DogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogModel.swift; sourceTree = "<group>"; };
+		AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogURLManager.swift; sourceTree = "<group>"; };
 		AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApiPicture.swift; sourceTree = "<group>"; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
@@ -96,8 +94,7 @@
 		AB1222D52AA0ED3300B15B40 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				AB1222D62AA0ED5500B15B40 /* DogAPI.swift */,
-				AB1222D82AA0ED5D00B15B40 /* DogModel.swift */,
+				AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -110,12 +107,12 @@
 			path = StarredList;
 			sourceTree = "<group>";
 		};
-		AB5B71C92A9B2C4E00B22E29 /* Manager */ = {
+		AB5B71C92A9B2C4E00B22E29 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */,
 			);
-			path = Manager;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		AB769B5C2A9F16F700F62B1B /* TodoTableView */ = {
@@ -163,7 +160,7 @@
 				AB5B71C62A9B2B6300B22E29 /* StarredList */,
 				ABE1F9B82A96206700371F49 /* Settings */,
 				ABE1F9C12A96556C00371F49 /* Models */,
-				AB5B71C92A9B2C4E00B22E29 /* Manager */,
+				AB5B71C92A9B2C4E00B22E29 /* Firebase */,
 				AB1222D52AA0ED3300B15B40 /* API */,
 				ABE1F9B52A961FA700371F49 /* Extension.swift */,
 				ABE1F9BD2A96445000371F49 /* Constrains.swift */,
@@ -293,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1222D72AA0ED5500B15B40 /* DogAPI.swift in Sources */,
+				AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */,
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
@@ -313,7 +310,6 @@
 				ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */,
 				ABE1F9C02A96517100371F49 /* CustomDetailViewCell.swift in Sources */,
 				ABE1F9C62A96563700371F49 /* Task.swift in Sources */,
-				AB1222D92AA0ED5D00B15B40 /* DogModel.swift in Sources */,
 				AB769B5E2A9F1AC600F62B1B /* TodoTableVC.swift in Sources */,
 				AB769B642A9F2A4A00F62B1B /* StarredListVC.swift in Sources */,
 			);

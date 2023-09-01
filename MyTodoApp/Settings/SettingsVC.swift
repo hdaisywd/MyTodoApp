@@ -28,7 +28,8 @@ class SettingsVC: UIViewController {
     lazy var items = [ nickNameChangeStr, darkLightModeChangeStr, appLockStr ] // 최초 접근시 할당하도록
     
     /* Api Picture */
-    let apiPicture = UIImageView() 
+    let apiPicture = UIImageView()
+    let dogURLManager = DogURLManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class SettingsVC: UIViewController {
         setUserProfile()
         setItemsTableView()
         setApiPicture()
+        getURLData()
     }
 
 }
