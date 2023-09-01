@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
     
     /* add Task 화면과 연결 */
     @objc func addBarButtonAction() {
-        present(AddTaskVC(), animated: true)
+        present(NewTaskVC(), animated: true)
     }
 
 

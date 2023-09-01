@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class AddTaskVC: UIViewController {
+class TaskVC: UIViewController {
     
     /* Add Task Title */
     let AddTaskTitle = UILabel()
@@ -15,6 +15,10 @@ class AddTaskVC: UIViewController {
     let contentTextField = UITextField()
     let taskSaveButton = UIButton()
     
+    /* TextField Initializer */
+    var initialTitleText = "Title"
+    var initialContentText = "Content"
+    
     /* Date Picker */
     let datePicker = UIDatePicker()
     let datePickerImage = UIImageView()
@@ -25,19 +29,9 @@ class AddTaskVC: UIViewController {
     /* Save Manager */
     let taskManager = TaskManager()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black 
-        
-        setAddTaskTitle()
-        setTaskField()
-        setDatePicker()
-        setSaveButton()
-    }
-    
     /* Add Task Title */
     func setAddTaskTitle() {
-        AddTaskTitle.text = "Add Task"
+        AddTaskTitle.text = "New Task"
         AddTaskTitle.font = UIFont.boldSystemFont(ofSize: 30)
         AddTaskTitle.textColor = .white
         
@@ -53,7 +47,7 @@ class AddTaskVC: UIViewController {
     
     /* TaskField */
     func setTaskField() {
-        titleLabel.text = "Title"
+        titleLabel.text = initialTitleText
         titleLabel.font = .systemFont(ofSize: 20)
         titleLabel.textColor = .white
         
@@ -75,7 +69,7 @@ class AddTaskVC: UIViewController {
             titleTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5)
         ])
         
-        contentLabel.text = "Content"
+        contentLabel.text = initialContentText
         contentLabel.font = .systemFont(ofSize: 20)
         contentLabel.textColor = .white
         

@@ -98,6 +98,13 @@ class TodoTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
+    /* Table View Cell 선택시 action 구현 */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            starreditems[indexPath.row]
+        }
+    }
+    
     /* Sections 구현 */
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count

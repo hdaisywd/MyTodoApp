@@ -10,6 +10,8 @@
 		AB1222D42AA0EC2500B15B40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222D32AA0EC2500B15B40 /* Alamofire */; };
 		AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */; };
 		AB5A1F032AA0FFA500E38176 /* SetApiPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */; };
+		AB5A1F062AA1A5AB00E38176 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F052AA1A5AB00E38176 /* TaskVC.swift */; };
+		AB5A1F082AA1A5B400E38176 /* EditTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F072AA1A5B400E38176 /* EditTaskVC.swift */; };
 		AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */; };
 		AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */; };
 		AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71502A9B364800C8A3A8 /* FirebaseAuth */; };
@@ -17,7 +19,7 @@
 		AB5F71552A9B364800C8A3A8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71542A9B364800C8A3A8 /* FirebaseDatabase */; };
 		AB5F71572A9B364800C8A3A8 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71562A9B364800C8A3A8 /* FirebaseDatabaseSwift */; };
 		AB5F71592A9B364800C8A3A8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71582A9B364800C8A3A8 /* FirebaseStorage */; };
-		AB5F715D2A9B4B6F00C8A3A8 /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */; };
+		AB5F715D2A9B4B6F00C8A3A8 /* NewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5F715C2A9B4B6F00C8A3A8 /* NewTaskVC.swift */; };
 		AB769B5E2A9F1AC600F62B1B /* TodoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */; };
 		AB769B602A9F1D6100F62B1B /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB769B5F2A9F1D6100F62B1B /* TodoVC.swift */; };
 		AB769B622A9F1EDC00F62B1B /* DateDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB769B612A9F1EDC00F62B1B /* DateDetailVC.swift */; };
@@ -45,8 +47,10 @@
 /* Begin PBXFileReference section */
 		AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogURLManager.swift; sourceTree = "<group>"; };
 		AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApiPicture.swift; sourceTree = "<group>"; };
+		AB5A1F052AA1A5AB00E38176 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
+		AB5A1F072AA1A5B400E38176 /* EditTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVC.swift; sourceTree = "<group>"; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		AB5F715C2A9B4B6F00C8A3A8 /* NewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVC.swift; sourceTree = "<group>"; };
 		AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableVC.swift; sourceTree = "<group>"; };
 		AB769B5F2A9F1D6100F62B1B /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
 		AB769B612A9F1EDC00F62B1B /* DateDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDetailVC.swift; sourceTree = "<group>"; };
@@ -97,6 +101,16 @@
 				AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		AB5A1F042AA1A52E00E38176 /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A1F052AA1A5AB00E38176 /* TaskVC.swift */,
+				AB5F715C2A9B4B6F00C8A3A8 /* NewTaskVC.swift */,
+				AB5A1F072AA1A5B400E38176 /* EditTaskVC.swift */,
+			);
+			path = TaskView;
 			sourceTree = "<group>";
 		};
 		AB5B71C62A9B2B6300B22E29 /* StarredList */ = {
@@ -154,6 +168,7 @@
 				ABE1F9902A961B4A00371F49 /* AppDelegate.swift */,
 				ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */,
 				ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */,
+				AB5A1F042AA1A52E00E38176 /* TaskView */,
 				AB769B5C2A9F16F700F62B1B /* TodoTableView */,
 				ABE1F9B72A96204300371F49 /* Home */,
 				ABB7DA742A9725DA00F4DA49 /* Todo */,
@@ -178,7 +193,6 @@
 				ABE1F9A92A961BEC00371F49 /* HomeVC.swift */,
 				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
 				AB769B612A9F1EDC00F62B1B /* DateDetailVC.swift */,
-				AB5F715C2A9B4B6F00C8A3A8 /* AddTaskVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -291,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */,
+				AB5A1F062AA1A5AB00E38176 /* TaskVC.swift in Sources */,
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
@@ -298,10 +313,11 @@
 				AB769B622A9F1EDC00F62B1B /* DateDetailVC.swift in Sources */,
 				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */,
-				AB5F715D2A9B4B6F00C8A3A8 /* AddTaskVC.swift in Sources */,
+				AB5F715D2A9B4B6F00C8A3A8 /* NewTaskVC.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
 				ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */,
 				AB5A1F032AA0FFA500E38176 /* SetApiPicture.swift in Sources */,
+				AB5A1F082AA1A5B400E38176 /* EditTaskVC.swift in Sources */,
 				AB769B602A9F1D6100F62B1B /* TodoVC.swift in Sources */,
 				ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */,
 				ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */,

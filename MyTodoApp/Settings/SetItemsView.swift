@@ -64,7 +64,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         let doneAction = UIAlertAction(title: "Done", style: .default) { (action) in
             let nickname = changeNickName.textFields?[0].text
             UserDefaults.standard.set(nickname, forKey: "nickName")
-            print("닉네임 체인지 성공", nickname)
             self.viewWillAppear(true)
         }
         
