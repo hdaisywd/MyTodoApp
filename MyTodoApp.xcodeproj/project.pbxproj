@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		AB1222D42AA0EC2500B15B40 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AB1222D32AA0EC2500B15B40 /* Alamofire */; };
 		AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */; };
+		AB3389072AA23F7A00F48704 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3389062AA23F7A00F48704 /* Protocol.swift */; };
 		AB5A1F032AA0FFA500E38176 /* SetApiPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */; };
 		AB5A1F062AA1A5AB00E38176 /* TaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F052AA1A5AB00E38176 /* TaskVC.swift */; };
 		AB5A1F082AA1A5B400E38176 /* EditTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F072AA1A5B400E38176 /* EditTaskVC.swift */; };
+		AB5A1F102AA218FA00E38176 /* MyCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A1F0F2AA218FA00E38176 /* MyCalendarView.swift */; };
 		AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */; };
 		AB5F714F2A9B364800C8A3A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F714E2A9B364800C8A3A8 /* FirebaseAnalytics */; };
 		AB5F71512A9B364800C8A3A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AB5F71502A9B364800C8A3A8 /* FirebaseAuth */; };
@@ -27,7 +29,6 @@
 		AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9749852A999DC600042286 /* CustomSettingsCell.swift */; };
 		AB9749882A999FA700042286 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB9749872A999FA700042286 /* GoogleService-Info.plist */; };
 		ABC4F6282A9FB628004339D0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = ABC4F6272A9FB628004339D0 /* FSCalendar */; };
-		ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B402A98E8B8005F0F91 /* User.swift */; };
 		ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */; };
 		ABCB6B452A98FE21005F0F91 /* SetItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */; };
 		ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9902A961B4A00371F49 /* AppDelegate.swift */; };
@@ -36,19 +37,19 @@
 		ABE1F9A02A961B4C00371F49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE1F99E2A961B4C00371F49 /* LaunchScreen.storyboard */; };
 		ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */; };
 		ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9A92A961BEC00371F49 /* HomeVC.swift */; };
-		ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */; };
 		ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */; };
 		ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9B52A961FA700371F49 /* Extension.swift */; };
-		ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BD2A96445000371F49 /* Constrains.swift */; };
 		ABE1F9C02A96517100371F49 /* CustomDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */; };
 		ABE1F9C62A96563700371F49 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE1F9C52A96563700371F49 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB1222D62AA0ED5500B15B40 /* DogURLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogURLManager.swift; sourceTree = "<group>"; };
+		AB3389062AA23F7A00F48704 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetApiPicture.swift; sourceTree = "<group>"; };
 		AB5A1F052AA1A5AB00E38176 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
 		AB5A1F072AA1A5B400E38176 /* EditTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVC.swift; sourceTree = "<group>"; };
+		AB5A1F0F2AA218FA00E38176 /* MyCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendarView.swift; sourceTree = "<group>"; };
 		AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		AB5F715C2A9B4B6F00C8A3A8 /* NewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVC.swift; sourceTree = "<group>"; };
 		AB769B5D2A9F1AC600F62B1B /* TodoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableVC.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		AB769B632A9F2A4A00F62B1B /* StarredListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredListVC.swift; sourceTree = "<group>"; };
 		AB9749852A999DC600042286 /* CustomSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsCell.swift; sourceTree = "<group>"; };
 		AB9749872A999FA700042286 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		ABCB6B402A98E8B8005F0F91 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABCB6B422A98EBE1005F0F91 /* SetUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserProfile.swift; sourceTree = "<group>"; };
 		ABCB6B442A98FE21005F0F91 /* SetItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetItemsView.swift; sourceTree = "<group>"; };
 		ABE1F98D2A961B4A00371F49 /* MyTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +68,8 @@
 		ABE1F9A12A961B4C00371F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		ABE1F9A92A961BEC00371F49 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCalendar.swift; sourceTree = "<group>"; };
 		ABE1F9AF2A961C7A00371F49 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		ABE1F9B52A961FA700371F49 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		ABE1F9BD2A96445000371F49 /* Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrains.swift; sourceTree = "<group>"; };
 		ABE1F9BF2A96517100371F49 /* CustomDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailViewCell.swift; sourceTree = "<group>"; };
 		ABE1F9C52A96563700371F49 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +111,59 @@
 			path = TaskView;
 			sourceTree = "<group>";
 		};
+		AB5A1F092AA1E54D00E38176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB5B71C92A9B2C4E00B22E29 /* Firebase */,
+				AB1222D52AA0ED3300B15B40 /* API */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB5A1F0A2AA1E55400E38176 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABE1F9B72A96204300371F49 /* Home */,
+				ABB7DA742A9725DA00F4DA49 /* Today */,
+				AB5B71C62A9B2B6300B22E29 /* StarredList */,
+				ABE1F9B82A96206700371F49 /* Settings */,
+				AB769B5C2A9F16F700F62B1B /* TodoTableView */,
+				AB5A1F042AA1A52E00E38176 /* TaskView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB5A1F0B2AA1E55800E38176 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB5A1F0C2AA1EAEA00E38176 /* Home */,
+				AB5A1F0D2AA1EAF000E38176 /* Today */,
+				AB5A1F0E2AA1EB0100E38176 /* Settings */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AB5A1F0C2AA1EAEA00E38176 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AB5A1F0D2AA1EAF000E38176 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		AB5A1F0E2AA1EB0100E38176 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		AB5B71C62A9B2B6300B22E29 /* StarredList */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +175,7 @@
 		AB5B71C92A9B2C4E00B22E29 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				ABE1F9C52A96563700371F49 /* Task.swift */,
 				AB5B71CA2A9B2C5D00B22E29 /* TaskManager.swift */,
 			);
 			path = Firebase;
@@ -138,12 +190,12 @@
 			path = TodoTableView;
 			sourceTree = "<group>";
 		};
-		ABB7DA742A9725DA00F4DA49 /* Todo */ = {
+		ABB7DA742A9725DA00F4DA49 /* Today */ = {
 			isa = PBXGroup;
 			children = (
 				AB769B5F2A9F1D6100F62B1B /* TodoVC.swift */,
 			);
-			path = Todo;
+			path = Today;
 			sourceTree = "<group>";
 		};
 		ABE1F9842A961B4A00371F49 = {
@@ -168,17 +220,11 @@
 				ABE1F9902A961B4A00371F49 /* AppDelegate.swift */,
 				ABE1F9922A961B4A00371F49 /* SceneDelegate.swift */,
 				ABE1F9A72A961BC200371F49 /* MainTabBarController.swift */,
-				AB5A1F042AA1A52E00E38176 /* TaskView */,
-				AB769B5C2A9F16F700F62B1B /* TodoTableView */,
-				ABE1F9B72A96204300371F49 /* Home */,
-				ABB7DA742A9725DA00F4DA49 /* Todo */,
-				AB5B71C62A9B2B6300B22E29 /* StarredList */,
-				ABE1F9B82A96206700371F49 /* Settings */,
-				ABE1F9C12A96556C00371F49 /* Models */,
-				AB5B71C92A9B2C4E00B22E29 /* Firebase */,
-				AB1222D52AA0ED3300B15B40 /* API */,
+				AB3389062AA23F7A00F48704 /* Protocol.swift */,
+				AB5A1F0A2AA1E55400E38176 /* View */,
 				ABE1F9B52A961FA700371F49 /* Extension.swift */,
-				ABE1F9BD2A96445000371F49 /* Constrains.swift */,
+				AB5A1F092AA1E54D00E38176 /* Model */,
+				AB5A1F0B2AA1E55800E38176 /* Controller */,
 				ABE1F99C2A961B4C00371F49 /* Assets.xcassets */,
 				ABE1F99E2A961B4C00371F49 /* LaunchScreen.storyboard */,
 				ABE1F9A12A961B4C00371F49 /* Info.plist */,
@@ -190,8 +236,8 @@
 		ABE1F9B72A96204300371F49 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AB5A1F0F2AA218FA00E38176 /* MyCalendarView.swift */,
 				ABE1F9A92A961BEC00371F49 /* HomeVC.swift */,
-				ABE1F9AB2A961C1500371F49 /* SetCalendar.swift */,
 				AB769B612A9F1EDC00F62B1B /* DateDetailVC.swift */,
 			);
 			path = Home;
@@ -207,15 +253,6 @@
 				AB5A1F022AA0FFA500E38176 /* SetApiPicture.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		ABE1F9C12A96556C00371F49 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				ABE1F9C52A96563700371F49 /* Task.swift */,
-				ABCB6B402A98E8B8005F0F91 /* User.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB1222D72AA0ED5500B15B40 /* DogURLManager.swift in Sources */,
+				AB5A1F102AA218FA00E38176 /* MyCalendarView.swift in Sources */,
 				AB5A1F062AA1A5AB00E38176 /* TaskVC.swift in Sources */,
 				ABE1F9912A961B4A00371F49 /* AppDelegate.swift in Sources */,
 				AB5B71CB2A9B2C5D00B22E29 /* TaskManager.swift in Sources */,
 				ABE1F9AA2A961BEC00371F49 /* HomeVC.swift in Sources */,
+				AB3389072AA23F7A00F48704 /* Protocol.swift in Sources */,
 				ABE1F9B62A961FA800371F49 /* Extension.swift in Sources */,
 				AB769B622A9F1EDC00F62B1B /* DateDetailVC.swift in Sources */,
-				ABE1F9AC2A961C1500371F49 /* SetCalendar.swift in Sources */,
 				AB9749862A999DC600042286 /* CustomSettingsCell.swift in Sources */,
 				AB5F715D2A9B4B6F00C8A3A8 /* NewTaskVC.swift in Sources */,
 				ABE1F9932A961B4A00371F49 /* SceneDelegate.swift in Sources */,
@@ -319,8 +357,6 @@
 				AB5A1F032AA0FFA500E38176 /* SetApiPicture.swift in Sources */,
 				AB5A1F082AA1A5B400E38176 /* EditTaskVC.swift in Sources */,
 				AB769B602A9F1D6100F62B1B /* TodoVC.swift in Sources */,
-				ABCB6B412A98E8B8005F0F91 /* User.swift in Sources */,
-				ABE1F9BE2A96445000371F49 /* Constrains.swift in Sources */,
 				ABE1F9B02A961C7A00371F49 /* SettingsVC.swift in Sources */,
 				ABE1F9A82A961BC200371F49 /* MainTabBarController.swift in Sources */,
 				ABCB6B432A98EBE1005F0F91 /* SetUserProfile.swift in Sources */,
